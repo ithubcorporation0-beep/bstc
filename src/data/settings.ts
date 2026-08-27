@@ -11,18 +11,18 @@ export const siteSettings: SiteSettings = {
   favicon: "/favicon.ico",
 
   // Contact Information
-  email: "consult@bstc.com.pk", // TODO(O6): real email address from client
-  phone: "+92 300 0000000", // TODO(O2): real phone number from client
-  wa: "923000000000", // TODO(O3): real WhatsApp number from client
-  hours: "Mon - Sat: 9:00 AM - 6:00 PM", // TODO(O7): confirmed business hours from client
-  address: "Blue Area, Islamabad, Pakistan", // TODO(O4): real office address from client
-  mapsLink: "https://maps.google.com", // TODO(O5): Google Maps link from client
+  email: "bs.taxconsultants@gmail.com",
+  phone: "+92 333 9860439",
+  wa: "923339860439",
+  hours: "Mon - Sat: 9:00 AM - 6:00 PM",
+  address: "Office No. 03, Shehzad Plaza, Saidu Road, Makan Bagh, Mingora, District Swat",
+  mapsLink: "https://maps.google.com/?q=Shehzad+Plaza+Saidu+Road+Makan+Bagh+Mingora+Swat",
 
   // Global SEO & Analytics
   seoTitle: "BSTC — Business Solutions Tax Consultants | Tax & Corporate Advisory Pakistan",
   seoDesc:
-    "Leading tax consultancy in Pakistan. Income tax filing, sales tax, SECP company registration, NTN, and corporate bookkeeping led by Hassan Zeb (Registered ITP).",
-  gaId: "G-XXXXXXXXXX", // TODO(O16): Google Analytics 4 Measurement ID from client
+    "Leading tax consultancy in Swat & Pakistan. Income tax filing, sales tax, SECP company registration, NTN, and corporate bookkeeping led by Hassan Zeb (Registered ITP).",
+  gaId: "G-XXXXXXXXXX",
 
   // Social Channels
   fb: "https://facebook.com", // TODO(O8): Facebook page URL from client

@@ -5,16 +5,16 @@
       <stop offset="100%" stop-color="#020617" />
     </radialGradient>
     <linearGradient id="fb-b" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#047857" /><stop offset="100%" stop-color="#065f46" />
+      <stop offset="0%" stop-color="#14b8a6" /><stop offset="100%" stop-color="#0d9488" />
     </linearGradient>
     <linearGradient id="fb-s" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" /><stop offset="100%" stop-color="#059669" />
+      <stop offset="0%" stop-color="#22c55e" /><stop offset="100%" stop-color="#16a34a" />
     </linearGradient>
     <linearGradient id="fb-t" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4ade80" /><stop offset="100%" stop-color="#16a34a" />
+      <stop offset="0%" stop-color="#facc15" /><stop offset="100%" stop-color="#eab308" />
     </linearGradient>
     <linearGradient id="fb-c" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#84cc16" /><stop offset="100%" stop-color="#65a30d" />
+      <stop offset="0%" stop-color="#a3e635" /><stop offset="100%" stop-color="#65a30d" />
     </linearGradient>
   </defs>
 

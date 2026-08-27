@@ -12,12 +12,12 @@ export const team: TeamMember[] = [
     dept: "Direct Taxation & Corporate Advisory",
     shortDesc: "Registered Income Tax Practitioner (ITP) leading corporate tax strategy and SECP compliance.",
     bio: "Hassan Zeb is a Registered Income Tax Practitioner (ITP) with over 12 years of specialized experience in corporate taxation, FBR compliance, and SECP regulations. He founded BSTC to simplify the complex regulatory landscape for Pakistani businesses, helping over 1,500 clients achieve full tax compliance and seamless company incorporations.",
-    email: "hassan@bstc.com.pk", // TODO(O6): confirm direct email
-    phone: "+92 300 0000000", // TODO(O2): real phone number from client
+    email: "bs.taxconsultants@gmail.com",
+    phone: "+92 333 9860439",
     ext: "101",
-    wa: "923000000000", // TODO(O3): real WhatsApp number from client
-    li: "https://linkedin.com", // TODO(O9): LinkedIn profile from client
-    img: "/images/team/hassan-zeb.svg", // TODO(O14): real headshot image from client
+    wa: "923339860439",
+    li: "https://linkedin.com",
+    img: "/images/team/hassan-zeb.svg",
     status: "active",
     order: 1,
   },

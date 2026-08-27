@@ -5,11 +5,11 @@ This live tracker documents all items requiring authentic content, credentials, 
 | Item ID | Section / Field | Current Placeholder Value | What Is Needed From Client | Status | Date Resolved |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **O1** | Service Detail Pages (`src/data/services.ts`) | Empty strings / empty arrays | Authentic `fullDesc`, `benefits`, `reqDocs`, `process`, and `faqs` for all 14 services. | 🟡 Open | — |
-| **O2** | Official Phone Number (`src/data/settings.ts`, `team.ts`) | `+92 300 0000000` | Official office phone numbers for general inquiries and consultant direct extensions. | 🟡 Open | — |
-| **O3** | Official WhatsApp Number (`src/data/settings.ts`, `team.ts`) | `923000000000` | Active WhatsApp business number for instant chat widget and 1-click consultation. | 🟡 Open | — |
-| **O4** | Office Physical Address (`src/data/settings.ts`) | `Blue Area, Islamabad, Pakistan` | Exact physical street address, building/floor, and office location in Pakistan. | 🟡 Open | — |
-| **O5** | Google Maps Location Link (`src/data/settings.ts`) | `https://maps.google.com` | Google Maps location URL / embed link for the office. | 🟡 Open | — |
-| **O6** | Inquiries Email Address (`src/data/settings.ts`, `team.ts`) | `consult@bstc.com.pk` | Confirmed active email address for contact form submissions and consultant profiles. | 🟡 Open | — |
+| **O2** | Official Phone Number (`src/data/settings.ts`, `team.ts`) | `+92 333 9860439` | Official office phone numbers for general inquiries and consultant direct extensions. | 🟢 Resolved | 2026-08-27 |
+| **O3** | Official WhatsApp Number (`src/data/settings.ts`, `team.ts`) | `923339860439` | Active WhatsApp business number for instant chat widget and 1-click consultation. | 🟢 Resolved | 2026-08-27 |
+| **O4** | Office Physical Address (`src/data/settings.ts`) | `Office No. 03, Shehzad Plaza, Saidu Road, Makan Bagh, Mingora, District Swat` | Exact physical street address, building/floor, and office location in Pakistan. | 🟢 Resolved | 2026-08-27 |
+| **O5** | Google Maps Location Link (`src/data/settings.ts`) | `https://maps.google.com/?q=Shehzad+Plaza+Saidu+Road+Makan+Bagh+Mingora+Swat` | Google Maps location URL / embed link for the office. | 🟢 Resolved | 2026-08-27 |
+| **O6** | Inquiries Email Address (`src/data/settings.ts`, `team.ts`) | `bs.taxconsultants@gmail.com` | Confirmed active email address for contact form submissions and consultant profiles. | 🟢 Resolved | 2026-08-27 |
 | **O7** | Operating Business Hours (`src/data/settings.ts`) | `Mon - Sat: 9:00 AM - 6:00 PM` | Confirmed office working hours and weekend schedule. | 🟡 Open | — |
 | **O8** | Facebook Page URL (`src/data/settings.ts`) | `https://facebook.com` | Official Facebook company page URL. | 🟡 Open | — |
 | **O9** | LinkedIn Profile URL (`src/data/settings.ts`, `team.ts`) | `https://linkedin.com` | Official company LinkedIn page and consultant profile URLs. | 🟡 Open | — |

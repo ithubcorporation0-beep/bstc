@@ -2,41 +2,43 @@
   <defs>
     <!-- Background Gradient -->
     <radialGradient id="badge-bg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1e293b" />
-      <stop offset="70%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#020617" />
+      <stop offset="0%" stop-color="#182030" />
+      <stop offset="70%" stop-color="#0c121e" />
+      <stop offset="100%" stop-color="#04070d" />
     </radialGradient>
 
-    <!-- Bar Gradients -->
+    <!-- 4 Bar Gradients matching authentic card -->
+    <!-- Bar 1: B (Teal / Turquoise) -->
     <linearGradient id="bar-b" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#047857" />
-      <stop offset="100%" stop-color="#065f46" />
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0d9488" />
     </linearGradient>
+    <!-- Bar 2: S (Forest Green) -->
     <linearGradient id="bar-s" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
-    <linearGradient id="bar-t" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="0%" stop-color="#22c55e" />
       <stop offset="100%" stop-color="#16a34a" />
     </linearGradient>
+    <!-- Bar 3: T (Warm Yellow / Gold) -->
+    <linearGradient id="bar-t" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <!-- Bar 4: C (Vibrant Lime) -->
     <linearGradient id="bar-c" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#84cc16" />
+      <stop offset="0%" stop-color="#a3e635" />
       <stop offset="100%" stop-color="#65a30d" />
     </linearGradient>
 
     <!-- Drop Shadows & Glows -->
     <filter id="badge-shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
     </filter>
     <filter id="glow-swoosh" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#ffffff" flood-opacity="0.3" />
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#ffffff" flood-opacity="0.35" />
     </filter>
 
     <!-- Text Curved Paths -->
-    <!-- Top Arc Path: left to right over top -->
     <path id="top-arc" d="M 90 250 A 160 160 0 0 1 410 250" fill="none" />
-    <!-- Bottom Arc Path: left to right under bottom -->
     <path id="bottom-arc" d="M 410 250 A 160 160 0 0 1 90 250" fill="none" />
   </defs>
 
@@ -62,20 +64,20 @@
   </text>
 
   <!-- Vertical Divider Bars in text ring -->
-  <circle cx="90" cy="250" r="4" fill="#84cc16" />
-  <circle cx="410" cy="250" r="4" fill="#84cc16" />
+  <circle cx="90" cy="250" r="4" fill="#facc15" />
+  <circle cx="410" cy="250" r="4" fill="#facc15" />
 
   <!-- Center Emblem Group: 4 Slanted BSTC Bars + Checkmark Swoosh -->
   <g id="center-emblem" transform="translate(0, -5)">
-    <!-- Bar 1: B (Dark Teal / Forest Green) -->
+    <!-- Bar 1: B (Teal / Turquoise) -->
     <polygon points="198,280 226,280 236,220 208,220" fill="url(#bar-b)" />
     <text x="216" y="260" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="23" font-weight="900" fill="#ffffff" text-anchor="middle" transform="skewX(-10) translate(36, 0)">B</text>
 
-    <!-- Bar 2: S (Medium Emerald) -->
+    <!-- Bar 2: S (Forest Green) -->
     <polygon points="228,268 256,268 268,195 240,195" fill="url(#bar-s)" />
     <text x="246" y="243" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" transform="skewX(-10) translate(33, 0)">S</text>
 
-    <!-- Bar 3: T (Bright Grass Green) -->
+    <!-- Bar 3: T (Warm Yellow / Gold) -->
     <polygon points="258,256 286,256 298,170 270,170" fill="url(#bar-t)" />
     <text x="276" y="224" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" transform="skewX(-10) translate(30, 0)">T</text>
 
@@ -83,7 +85,7 @@
     <polygon points="288,244 316,244 328,145 300,145" fill="url(#bar-c)" />
     <text x="306" y="206" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle" transform="skewX(-10) translate(26, 0)">C</text>
 
-    <!-- Checkmark Swoosh (Crisp pure white slicing across bottom and up to the right) -->
+    <!-- Checkmark Swoosh -->
     <path d="M 182 258 
              L 218 318 
              C 225 330, 235 328, 248 310
