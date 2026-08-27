@@ -1,55 +1,66 @@
 # BSTC — Business Solutions Tax Consultants
 
-Official web platform for **BSTC (Business Solutions Tax Consultants)**, a premier Pakistani tax and corporate consultancy led by Registered Income Tax Practitioners (ITP).
+Official website for **Business Solutions Tax Consultants (BSTC)**, a Pakistani tax and corporate consultancy led by Registered Income Tax Practitioners (ITP).
 
 ---
 
-## ⚡ Tech Stack
+## 📌 Tech Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router, Server Components & Static Site Generation)
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Static Site Generation)
 - **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Fonts**: Self-hosted / Optimized Web Fonts (Plus Jakarta Sans & Inter)
-- **Deployment**: Vercel / Node.js Server
+- **Deployment**: [Vercel](https://vercel.com/) / Static Hosting
 
 ---
 
-## 🚀 Quick Start
+## 🚀 How to Run Locally
 
-### 1. Install Dependencies
+### 1. Prerequisites
+- Node.js (version 18 or higher recommended)
+- npm or yarn
+
+### 2. Install Dependencies
 ```bash
 npm install
 ```
 
-### 2. Start Development Server
+### 3. Start Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your web browser to view the site.
 
-### 3. Type Checking & Production Build
+### 4. Build for Production
 ```bash
-npm run typecheck
 npm run build
+npm run start
 ```
 
 ---
 
-## 📁 Content Architecture (Golden Rule)
+## 📁 Where Content Lives (The Golden Rule)
 
-> **All text, contact information, services, team members, and FAQs live in `src/data/`.**  
-> Presentation components in `src/components/` contain zero hardcoded content.
+> **All site copy, services, team bios, contact numbers, and FAQs live exclusively in `src/data/`.**  
+> Presentation components in `src/components/` never contain hardcoded text or numbers.
 
-- `src/data/settings.ts`: Company contact numbers, WhatsApp link, physical address, business hours, social channels.
-- `src/data/services.ts`: The 14 corporate and tax services with details, benefits, documents, and process steps.
-- `src/data/team.ts`: Consultant profiles, designations, contact details, and bios.
-- `src/data/home.ts`: Hero text, metrics, about narrative, why choose us pillars, testimonials, and FAQs.
-- `src/data/index.ts`: Barrel export for clean imports across the application.
+| Content Type | Location |
+| :--- | :--- |
+| **Phone, Email, WhatsApp, Address, Socials** | `src/data/settings.ts` |
+| **The 14 Corporate & Tax Services** | `src/data/services.ts` |
+| **Team Profiles & Consultants** | `src/data/team.ts` |
+| **Hero Copy, Stats, About, FAQs, Reviews** | `src/data/home.ts` |
+| **Data Exports** | `src/data/index.ts` |
 
 ---
 
-## 📚 Documentation
-- [`docs/CONTENT-GUIDE.md`](./docs/CONTENT-GUIDE.md): Client-facing manual for requesting or editing website text.
-- [`docs/OPEN-ITEMS.md`](./docs/OPEN-ITEMS.md): Live tracker for PRD §9 confirmation items (O1–O16).
-- [`docs/HANDOVER.md`](./docs/HANDOVER.md): Developer architecture and onboarding guide.
+## 🚢 How to Deploy
+
+1. **Vercel (Recommended)**:
+   - Push your code to a GitHub repository (`main` branch).
+   - Import the repository in [Vercel Dashboard](https://vercel.com/).
+   - Add any production environment variables from `.env.example` in Vercel settings.
+   - Every `git push` to `main` will automatically build and deploy the live website.
+
+2. **Self-Hosted Node Server**:
+   - Run `npm run build` followed by `npm run start`.
