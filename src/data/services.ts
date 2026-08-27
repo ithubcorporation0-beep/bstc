@@ -1,0 +1,221 @@
+import { Service } from "@/types/content";
+
+/**
+ * Static Service Catalog.
+ * Contains all 14 corporate, taxation, and registration services offered by BSTC.
+ * 
+ * Note: Following strict project rules, template descriptions and fake legal steps have
+ * been excluded. Unverified fields are marked with TODO(O1) awaiting authentic client input.
+ */
+export const services: Service[] = [
+  {
+    slug: "income-tax",
+    title: "Income Tax",
+    icon: "FileText",
+    desc: "Individual, AOP, and Corporate income tax return filing with full FBR compliance.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Income Tax Return Filing in Pakistan | Individual & Corporate Tax | BSTC",
+    seoDesc: "Professional income tax return filing for individuals, salaried employees, AOPs, and private companies in Pakistan. Led by Hassan Zeb (Registered ITP).",
+    status: "active",
+    order: 1,
+  },
+  {
+    slug: "sales-tax",
+    title: "Sales Tax",
+    icon: "Receipt",
+    desc: "Monthly sales tax returns across federal and provincial revenue authorities.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Sales Tax Filing & Advisory Services Pakistan | FBR Sales Tax | BSTC",
+    seoDesc: "Timely monthly sales tax return preparation, input/output adjustment, and compliance across Pakistan.",
+    status: "active",
+    order: 2,
+  },
+  {
+    slug: "bookkeeping",
+    title: "Bookkeeping",
+    icon: "Calculator",
+    desc: "Professional accounting, general ledger maintenance, and financial record management.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Corporate Bookkeeping & Accounting Services | Pakistan | BSTC",
+    seoDesc: "Accurate ledger bookkeeping, payroll management, and transaction reconciliation for small and growing businesses.",
+    status: "active",
+    order: 3,
+  },
+  {
+    slug: "financial-statement",
+    title: "Financial Statement",
+    icon: "FileSpreadsheet",
+    desc: "Audited and unaudited financial statement preparation conforming to accounting standards.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Financial Statement Preparation & Reporting | BSTC Pakistan",
+    seoDesc: "Comprehensive balance sheet, profit & loss, and cash flow statement preparation for bank loans, SECP compliance, and tax filings.",
+    status: "active",
+    order: 4,
+  },
+  {
+    slug: "ntn-registration",
+    title: "NTN Registration",
+    icon: "FileText",
+    desc: "Fast National Tax Number generation for salaried individuals, sole proprietors, and businesses.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Fast NTN Registration for Individuals & Businesses | FBR Iris | BSTC",
+    seoDesc: "Get your National Tax Number (NTN) issued through FBR Iris with expert guidance from registered tax practitioners.",
+    status: "active",
+    order: 5,
+  },
+  {
+    slug: "sales-tax-registration",
+    title: "Sales Tax Registration",
+    icon: "Building2",
+    desc: "FBR STRN issuance for manufacturers, traders, wholesalers, and importers.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "Sales Tax Registration (STRN) Pakistan | FBR Compliance | BSTC",
+    seoDesc: "Complete Sales Tax Registration Number (STRN) procurement for commercial importers, manufacturers, and service providers.",
+    status: "active",
+    order: 6,
+  },
+  {
+    slug: "secp-registration",
+    title: "SECP Registration",
+    icon: "Briefcase",
+    desc: "Private Limited (PVT LTD), Single Member Company (SMC), and LLP incorporations.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "SECP Company Registration | PVT LTD, SMC, LLP Incorporation | BSTC",
+    seoDesc: "Seamless corporate entity incorporation with SECP Pakistan. Name reservation, digital signatures, and certificate issuance.",
+    status: "active",
+    order: 7,
+  },
+  {
+    slug: "pra-registration",
+    title: "PRA Registration",
+    icon: "MapPin",
+    desc: "Punjab Revenue Authority registration and provincial sales tax on services.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "PRA Registration & Sales Tax on Services | Punjab | BSTC",
+    seoDesc: "Complete Punjab Revenue Authority tax enrollment and monthly compliance for service businesses in Punjab.",
+    status: "active",
+    order: 8,
+  },
+  {
+    slug: "kpra-registration",
+    title: "KPRA Registration",
+    icon: "Globe",
+    desc: "Khyber Pakhtunkhwa Revenue Authority tax registration, licensing, and compliance.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "KPRA Registration & Advisory | Khyber Pakhtunkhwa | BSTC",
+    seoDesc: "Official Khyber Pakhtunkhwa Revenue Authority tax registration and advisory for hotels, contractors, and service providers.",
+    status: "active",
+    order: 9,
+  },
+  {
+    slug: "bra-registration",
+    title: "BRA Registration",
+    icon: "Compass",
+    desc: "Balochistan Revenue Authority tax registration and provincial services filing.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "BRA Registration & Compliance | Balochistan | BSTC",
+    seoDesc: "Balochistan Revenue Authority sales tax on services registration, withholding tax guidance, and monthly filing.",
+    status: "active",
+    order: 10,
+  },
+  {
+    slug: "srb-registration",
+    title: "SRB Registration",
+    icon: "Landmark",
+    desc: "Sindh Revenue Board registration and monthly sales tax filing for Karachi & Sindh.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "SRB Registration & Tax Filing | Sindh Revenue Board | BSTC",
+    seoDesc: "Sindh Revenue Board (SRB) registration, e-filing, and compliance for corporate entities and service providers in Sindh.",
+    status: "active",
+    order: 11,
+  },
+  {
+    slug: "pec-registration",
+    title: "PEC Registration",
+    icon: "Award",
+    desc: "Pakistan Engineering Council contractor and operator license processing.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "PEC License Registration & Renewal | Pakistan Engineering Council | BSTC",
+    seoDesc: "Assistance with PEC constructor/operator licensing, category upgrades, and engineer biometrics verification.",
+    status: "active",
+    order: 12,
+  },
+  {
+    slug: "pos-integration",
+    title: "POS Integration",
+    icon: "Receipt",
+    desc: "FBR Point of Sale (POS) system integration for tier-1 retailers and restaurants.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "FBR POS Integration Services | Tier-1 Retail Compliance | BSTC",
+    seoDesc: "Certified FBR POS software integration, barcode verification, and real-time sales reporting for retail businesses in Pakistan.",
+    status: "active",
+    order: 13,
+  },
+  {
+    slug: "dis-integration",
+    title: "DIS Integration",
+    icon: "Layers",
+    desc: "FBR Digital Invoicing System (DIS) setup and ERP compliance for registered businesses.",
+    fullDesc: "", // TODO(O1): awaiting real content from client
+    benefits: [], // TODO(O1): awaiting real content from client
+    reqDocs: [], // TODO(O1): awaiting real content from client
+    process: [], // TODO(O1): awaiting real content from client
+    faqs: [], // TODO(O1): awaiting real content from client
+    seoTitle: "FBR Digital Invoicing (DIS) Integration | Corporate Compliance | BSTC",
+    seoDesc: "Implementation of FBR Digital Invoicing System (DIS) for corporate taxpayers and supply chain enterprises.",
+    status: "active",
+    order: 14,
+  },
+];
