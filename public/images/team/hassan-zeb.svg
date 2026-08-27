@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="hz-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="40" fill="url(#hz-grad)" />
+  <circle cx="200" cy="150" r="65" fill="#ffffff" fill-opacity="0.9" />
+  <path d="M100 340C100 270 145 240 200 240C255 240 300 270 300 340" fill="#ffffff" fill-opacity="0.9" />
+  <circle cx="200" cy="330" r="28" fill="#84cc16" />
+  <path d="M192 330L198 336L208 324" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

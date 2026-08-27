@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="about-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="60%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="lime-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" />
+      <stop offset="100%" stop-color="#a3e635" />
+    </linearGradient>
+  </defs>
+  <!-- Background Card -->
+  <rect width="800" height="600" rx="32" fill="url(#about-bg)" />
+  <!-- Decorative Grid & Circles -->
+  <circle cx="700" cy="100" r="180" fill="white" fill-opacity="0.05" />
+  <circle cx="100" cy="500" r="140" fill="url(#lime-accent)" fill-opacity="0.15" />
+  <!-- Document Container Surface -->
+  <rect x="120" y="80" width="560" height="440" rx="24" fill="white" fill-opacity="0.95" />
+  <!-- Header Bar -->
+  <rect x="160" y="120" width="180" height="24" rx="8" fill="#1e3a8a" />
+  <rect x="540" y="120" width="100" height="24" rx="8" fill="url(#lime-accent)" />
+  <!-- Report Rows -->
+  <rect x="160" y="180" width="480" height="12" rx="6" fill="#e2e8f0" />
+  <rect x="160" y="210" width="400" height="12" rx="6" fill="#e2e8f0" />
+  <rect x="160" y="240" width="440" height="12" rx="6" fill="#e2e8f0" />
+  <!-- KPI Metric Boxes -->
+  <rect x="160" y="290" width="220" height="90" rx="16" fill="#eff6ff" />
+  <rect x="190" y="320" width="80" height="18" rx="6" fill="#1d4ed8" />
+  <rect x="190" y="350" width="140" height="10" rx="5" fill="#93c5fd" />
+  
+  <rect x="420" y="290" width="220" height="90" rx="16" fill="#f7fee7" />
+  <rect x="450" y="320" width="90" height="18" rx="6" fill="#4d7c0f" />
+  <rect x="450" y="350" width="130" height="10" rx="5" fill="#bef264" />
+  <!-- Verified Stamp Badge -->
+  <circle cx="600" cy="440" r="45" fill="url(#lime-accent)" />
+  <path d="M585 440L595 450L615 430" stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
