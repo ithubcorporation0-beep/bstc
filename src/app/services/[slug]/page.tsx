@@ -1,8 +1,9 @@
 import React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CheckCircle2, FileText, HelpCircle, ShieldCheck, ArrowRight } from "lucide-react";
+import { CheckCircle2, FileText, ShieldCheck } from "lucide-react";
 import { services, getServiceBySlug, getActiveServices } from "@/data";
+import { buildMetadata } from "@/lib/seo";
 import Breadcrumb from "@/components/services/Breadcrumb";
 import ServiceSidebar from "@/components/services/ServiceSidebar";
 import Accordion from "@/components/ui/Accordion";
@@ -23,7 +24,7 @@ export async function generateStaticParams() {
 }
 
 /**
- * Generate per-page SEO metadata from service data.
+ * Generate per-page SEO metadata using buildMetadata helper.
  */
 export async function generateMetadata({
   params,
@@ -32,21 +33,19 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
 
   if (!service || service.status !== "active") {
-    return {
-      title: "Service Not Found | BSTC",
+    return buildMetadata({
+      title: "Service Not Found",
       description: "The requested tax or corporate consultancy service could not be found.",
-    };
+      path: `/services/${slug}`,
+      noIndex: true,
+    });
   }
 
-  return {
+  return buildMetadata({
     title: service.seoTitle,
     description: service.seoDesc,
-    openGraph: {
-      title: service.seoTitle,
-      description: service.seoDesc,
-      type: "website",
-    },
-  };
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServiceDetailPage({ params }: PageProps) {

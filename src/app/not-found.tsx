@@ -1,7 +1,15 @@
 import React from "react";
-import Link from "next/link";
-import { ArrowLeft, Home, FileText, ShieldAlert } from "lucide-react";
+import { Metadata } from "next";
+import { Home, FileText, ShieldAlert } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Page Not Found",
+  description: "The requested page or tax service could not be located on the BSTC website.",
+  path: "/404",
+  noIndex: true,
+});
 
 export default function NotFound() {
   return (

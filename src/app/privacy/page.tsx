@@ -1,15 +1,16 @@
 import React from "react";
 import { Metadata } from "next";
-import { ShieldCheck, Lock, Mail, Eye, Clock, Database } from "lucide-react";
+import { Lock } from "lucide-react";
 import Breadcrumb from "@/components/services/Breadcrumb";
-import Card from "@/components/ui/Card";
 import { siteSettings } from "@/data/settings";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Business Solutions Tax Consultants (BSTC)",
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy",
   description:
-    "Privacy Policy for BSTC. Learn how we handle, protect, and process personal consultation data and financial information.",
-};
+    "Privacy Policy for Business Solutions Tax Consultants (BSTC). Details data collection, processing, retention, and deletion rights for tax consultation inquiries.",
+  path: "/privacy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

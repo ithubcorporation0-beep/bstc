@@ -1,14 +1,16 @@
 import React from "react";
 import { Metadata } from "next";
-import { Scale, ShieldCheck, FileCheck, AlertCircle } from "lucide-react";
+import { Scale } from "lucide-react";
 import Breadcrumb from "@/components/services/Breadcrumb";
 import { siteSettings } from "@/data/settings";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Business Solutions Tax Consultants (BSTC)",
+export const metadata: Metadata = buildMetadata({
+  title: "Terms of Service",
   description:
     "Terms of Service governing the use of BSTC consultancy services, website inquiries, and regulatory filing engagements.",
-};
+  path: "/terms",
+});
 
 export default function TermsOfServicePage() {
   return (

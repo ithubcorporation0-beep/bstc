@@ -11,6 +11,7 @@ import {
   Award,
 } from "lucide-react";
 import { team, getTeamMemberBySlug } from "@/data";
+import { buildMetadata } from "@/lib/seo";
 import Breadcrumb from "@/components/services/Breadcrumb";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -38,7 +39,7 @@ export async function generateStaticParams() {
 }
 
 /**
- * Generate per-consultant SEO metadata.
+ * Generate per-consultant SEO metadata using buildMetadata helper.
  */
 export async function generateMetadata({
   params,
@@ -47,21 +48,20 @@ export async function generateMetadata({
   const member = getTeamMemberBySlug(slug);
 
   if (!member || member.status !== "active") {
-    return {
-      title: "Consultant Profile Not Found | BSTC",
+    return buildMetadata({
+      title: "Consultant Profile Not Found",
       description: "The requested tax consultant profile could not be found.",
-    };
+      path: `/team/${slug}`,
+      noIndex: true,
+    });
   }
 
-  return {
-    title: `${member.name} — ${member.desig} | BSTC Pakistan`,
+  return buildMetadata({
+    title: `${member.name} — ${member.desig}`,
     description: member.shortDesc || member.bio.slice(0, 160),
-    openGraph: {
-      title: `${member.name} — ${member.desig}`,
-      description: member.shortDesc,
-      type: "profile",
-    },
-  };
+    path: `/team/${member.slug}`,
+    image: member.img || `/images/team/${member.slug}.svg`,
+  });
 }
 
 export default async function TeamMemberPage({ params }: PageProps) {
