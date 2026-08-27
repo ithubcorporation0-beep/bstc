@@ -1,7 +1,9 @@
 import React from "react";
 import { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
+import { getOrganizationJsonLd, getFaqPageJsonLd, JsonLdScript } from "@/lib/jsonld";
 import { siteSettings } from "@/data/settings";
+import { homeContent } from "@/data/home";
 import Hero from "@/components/home/Hero";
 import StatsBand from "@/components/home/StatsBand";
 import About from "@/components/home/About";
@@ -20,8 +22,15 @@ export const metadata: Metadata = buildMetadata({
 });
 
 export default function HomePage() {
+  const orgSchema = getOrganizationJsonLd();
+  const faqSchema = getFaqPageJsonLd(homeContent.faqs);
+
   return (
     <>
+      {/* Schema.org Structured Data */}
+      <JsonLdScript data={orgSchema} />
+      <JsonLdScript data={faqSchema} />
+
       <Hero />
       <StatsBand />
       <About />

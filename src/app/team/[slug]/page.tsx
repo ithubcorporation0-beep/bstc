@@ -12,6 +12,11 @@ import {
 } from "lucide-react";
 import { team, getTeamMemberBySlug } from "@/data";
 import { buildMetadata } from "@/lib/seo";
+import {
+  getPersonJsonLd,
+  getBreadcrumbJsonLd,
+  JsonLdScript,
+} from "@/lib/jsonld";
 import Breadcrumb from "@/components/services/Breadcrumb";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -82,8 +87,20 @@ export default async function TeamMemberPage({ params }: PageProps) {
   const cleanPhone = member.phone ? member.phone.replace(/[^0-9+]/g, "") : "";
   const cleanWa = member.wa ? member.wa.replace(/[^0-9]/g, "") : "";
 
+  // JSON-LD Structured Data
+  const personSchema = getPersonJsonLd(member);
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Our Team", url: "/#team" },
+    { name: member.name, url: `/team/${member.slug}` },
+  ]);
+
   return (
     <div className="min-h-screen">
+      {/* Schema.org Structured Data */}
+      <JsonLdScript data={personSchema} />
+      <JsonLdScript data={breadcrumbSchema} />
+
       {/* 1. Royal Gradient Banner */}
       <section className="gradient-royal text-white py-16 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none overflow-hidden">

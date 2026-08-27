@@ -4,6 +4,12 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, FileText, ShieldCheck } from "lucide-react";
 import { services, getServiceBySlug, getActiveServices } from "@/data";
 import { buildMetadata } from "@/lib/seo";
+import {
+  getServiceJsonLd,
+  getBreadcrumbJsonLd,
+  getFaqPageJsonLd,
+  JsonLdScript,
+} from "@/lib/jsonld";
 import Breadcrumb from "@/components/services/Breadcrumb";
 import ServiceSidebar from "@/components/services/ServiceSidebar";
 import Accordion from "@/components/ui/Accordion";
@@ -75,8 +81,22 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       }))
     : [];
 
+  // JSON-LD Structured Data
+  const serviceSchema = getServiceJsonLd(service);
+  const breadcrumbSchema = getBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/#services" },
+    { name: service.title, url: `/services/${service.slug}` },
+  ]);
+  const faqSchema = hasFaqs ? getFaqPageJsonLd(service.faqs) : null;
+
   return (
     <div className="min-h-screen">
+      {/* Schema.org Structured Data */}
+      <JsonLdScript data={serviceSchema} />
+      <JsonLdScript data={breadcrumbSchema} />
+      {faqSchema && <JsonLdScript data={faqSchema} />}
+
       {/* 1. Royal Gradient Hero Banner */}
       <section className="gradient-royal text-white py-16 sm:py-20 lg:py-24 relative overflow-hidden">
         {/* Ambient decorative elements */}
