@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <defs>
+    <linearGradient id="bstc-royal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="55%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="bstc-lime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" />
+      <stop offset="100%" stop-color="#a3e635" />
+    </linearGradient>
+  </defs>
+  <!-- Shield Emblem -->
+  <rect x="2" y="4" width="40" height="40" rx="12" fill="url(#bstc-royal)" />
+  <path d="M14 14H30C30 26 22 34 14 34" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 24H28" stroke="url(#bstc-lime)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Typography -->
+  <text x="52" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="-0.02em" fill="currentColor">BSTC</text>
+  <text x="52" y="39" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="7.5" letter-spacing="0.08em" fill="#84cc16">TAX CONSULTANTS</text>
+</svg>
