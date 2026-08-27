@@ -62,15 +62,38 @@ export function About() {
           {/* Right Column: Next.js Optimized Image (5 cols) */}
           <div className="lg:col-span-5">
             <Reveal delay={200} direction="left">
-              <div className="relative rounded-3xl overflow-hidden shadow-soft-lg border border-slate-200 dark:border-slate-800 group">
+              <div className="relative rounded-3xl overflow-hidden shadow-soft-xl border-2 border-slate-200 dark:border-slate-800 group bg-slate-950">
                 <Image
-                  src={about.img || "/images/about-showcase.svg"}
+                  src={about.img || "/images/about-consultant.jpg"}
                   alt="About Business Solutions Tax Consultants (BSTC) — Professional Tax Advisory Pakistan"
                   width={800}
                   height={600}
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                   priority={false}
                 />
+                
+                {/* Gradient vignette */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+
+                {/* Official BSTC Emblem Floating Badge */}
+                <div className="absolute bottom-4 left-4 right-4 sm:right-auto p-3 sm:p-3.5 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-soft-lg flex items-center gap-3 animate-in fade-in duration-300">
+                  <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm border border-slate-700">
+                    <Image
+                      src="/images/bstc-logo-badge.svg"
+                      alt="Official BSTC Logo Badge"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-display font-extrabold text-xs sm:text-sm text-ink leading-tight">
+                      Hassan Zeb (ITP)
+                    </div>
+                    <div className="text-[11px] font-bold text-lime-700 dark:text-lime-400 mt-0.5">
+                      Registered Tax Practitioner
+                    </div>
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>

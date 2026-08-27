@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CheckCircle2, FileText, ShieldCheck } from "lucide-react";
 import { services, getServiceBySlug, getActiveServices } from "@/data";
@@ -135,6 +136,21 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Service Content */}
           <div className="lg:col-span-8 space-y-12">
+            {/* Featured Visual Hero Image */}
+            {service.banner && (
+              <Reveal delay={0}>
+                <div className="relative h-64 sm:h-80 md:h-96 w-full rounded-3xl overflow-hidden shadow-soft-lg border border-slate-200 dark:border-slate-800 bg-slate-900">
+                  <Image
+                    src={service.banner}
+                    alt={`${service.title} — Professional Advisory`}
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                </div>
+              </Reveal>
+            )}
             {/* Overview Section */}
             {hasOverview && (
               <Reveal delay={0}>

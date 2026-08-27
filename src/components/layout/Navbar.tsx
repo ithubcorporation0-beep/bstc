@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ArrowRight, Phone, MessageSquare } from "lucide-react";
 import { siteSettings } from "@/data/settings";
 import ThemeToggle from "@/components/layout/ThemeToggle";
@@ -68,15 +69,19 @@ export function Navbar() {
           <Link
             href="/"
             onClick={closeMenu}
-            className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1"
+            className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl gradient-royal p-1 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-              <span className="font-display font-extrabold text-white text-base sm:text-lg tracking-tight">
-                B
-              </span>
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden shadow-sm group-hover:scale-105 transition-transform bg-slate-900 border border-slate-700/60 p-0.5 shrink-0">
+              <Image
+                src="/images/bstc-logo-badge.svg"
+                alt="BSTC Official Logo"
+                fill
+                className="object-contain p-0.5"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-extrabold text-lg sm:text-xl text-ink tracking-tight leading-none group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
+              <span className="font-display font-black text-lg sm:text-xl text-ink tracking-tight leading-none group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
                 {siteSettings.siteName}
               </span>
               <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase leading-tight mt-0.5">

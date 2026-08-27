@@ -1,20 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" fill="none">
   <defs>
-    <linearGradient id="bstc-royal" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a8a" />
-      <stop offset="55%" stop-color="#1d4ed8" />
-      <stop offset="100%" stop-color="#3b82f6" />
+    <radialGradient id="nav-badge-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </radialGradient>
+    <linearGradient id="nb-b" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#047857" /><stop offset="100%" stop-color="#065f46" />
     </linearGradient>
-    <linearGradient id="bstc-lime" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#84cc16" />
-      <stop offset="100%" stop-color="#a3e635" />
+    <linearGradient id="nb-s" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" /><stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="nb-t" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80" /><stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="nb-c" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84cc16" /><stop offset="100%" stop-color="#65a30d" />
     </linearGradient>
   </defs>
-  <!-- Shield Emblem -->
-  <rect x="2" y="4" width="40" height="40" rx="12" fill="url(#bstc-royal)" />
-  <path d="M14 14H30C30 26 22 34 14 34" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 24H28" stroke="url(#bstc-lime)" stroke-width="3" stroke-linecap="round"/>
-  <!-- Typography -->
-  <text x="52" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="20" letter-spacing="-0.02em" fill="currentColor">BSTC</text>
-  <text x="52" y="39" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="7.5" letter-spacing="0.08em" fill="#84cc16">TAX CONSULTANTS</text>
+
+  <!-- Left Icon Emblem (BSTC Badge) -->
+  <rect x="2" y="2" width="48" height="48" rx="14" fill="url(#nav-badge-bg)" stroke="#334155" stroke-width="1.5" />
+  
+  <!-- Mini 4 Slanted BSTC Bars -->
+  <g transform="translate(4.5, 4) scale(0.8)">
+    <polygon points="12,34 17,34 19,22 14,22" fill="url(#nb-b)" />
+    <text x="15" y="30.5" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="5" font-weight="900" fill="#ffffff" text-anchor="middle">B</text>
+
+    <polygon points="18,31 23,31 25,17 20,17" fill="url(#nb-s)" />
+    <text x="21.5" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="5.2" font-weight="900" fill="#ffffff" text-anchor="middle">S</text>
+
+    <polygon points="24,28 29,28 31,12 26,12" fill="url(#nb-t)" />
+    <text x="27.5" y="23" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="5.2" font-weight="900" fill="#ffffff" text-anchor="middle">T</text>
+
+    <polygon points="30,25 35,25 37,7 32,7" fill="url(#nb-c)" />
+    <text x="33.5" y="19" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="5.2" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>
+
+    <!-- White Swoosh Checkmark -->
+    <path d="M 9 29 L 16 41 C 17 43, 19 43, 22 39 L 36 22 C 38 20, 37 19, 35 20 L 21 34 C 19 36, 18 36, 17 33 L 11 27 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Right Typography -->
+  <g transform="translate(60, 0)">
+    <text x="0" y="28" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" letter-spacing="-0.03em" fill="currentColor">
+      BSTC
+    </text>
+    <text x="0" y="42" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="700" font-size="8" letter-spacing="0.14em" fill="#65a30d">
+      TAX CONSULTANTS
+    </text>
+  </g>
 </svg>

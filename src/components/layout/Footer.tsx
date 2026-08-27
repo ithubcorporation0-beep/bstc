@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -84,12 +85,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1: Company Info & Branding */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1">
-              <div className="w-9 h-9 rounded-xl gradient-royal flex items-center justify-center text-white font-extrabold font-display text-lg">
-                B
+            <Link href="/" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/60 p-0.5 shrink-0">
+                <Image
+                  src="/images/bstc-logo-badge.svg"
+                  alt="BSTC Official Logo"
+                  fill
+                  className="object-contain p-0.5"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-extrabold text-xl text-ink leading-none">
+                <span className="font-display font-black text-xl text-ink leading-none">
                   {siteSettings.siteName}
                 </span>
                 <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase mt-0.5">
