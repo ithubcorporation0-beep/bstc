@@ -164,7 +164,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         key={i}
                         className="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
                       >
-                        <CheckCircle2 className="w-5 h-5 text-lime-600 dark:text-lime-400 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-lime-700 dark:text-lime-400 shrink-0 mt-0.5" />
                         <span className="text-xs sm:text-sm font-semibold text-ink leading-snug">
                           {benefit}
                         </span>
@@ -266,7 +266,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                     <div className="text-[11px] text-slate-500 mt-1">Audit-Proof Accuracy</div>
                   </div>
                   <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-center">
-                    <div className="font-display font-bold text-lg text-lime-600 dark:text-lime-400">
+                    <div className="font-display font-bold text-lg text-lime-700 dark:text-lime-400">
                       Fast Turnaround
                     </div>
                     <div className="text-[11px] text-slate-500 mt-1">Digital Processing</div>

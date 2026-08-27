@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, ShieldCheck, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { homeContent } from "@/data/home";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
@@ -36,7 +36,7 @@ export function Hero() {
         {/* Eyebrow Trust Badge */}
         <Reveal delay={0}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-royal/20 dark:border-royal/30 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
-            <ShieldCheck className="w-4 h-4 text-lime-600 dark:text-lime-400" />
+            <ShieldCheck className="w-4 h-4 text-lime-700 dark:text-lime-400" />
             <span
               className={`text-xs font-bold tracking-wide uppercase ${
                 hasBgImage
@@ -112,15 +112,15 @@ export function Hero() {
             }`}
           >
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-lime-600 dark:text-lime-400" />
+              <CheckCircle2 className="w-4 h-4 text-lime-700 dark:text-lime-400" />
               <span>100% FBR &amp; SECP Compliant</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-lime-600 dark:text-lime-400" />
+              <CheckCircle2 className="w-4 h-4 text-lime-700 dark:text-lime-400" />
               <span>Federal &amp; Provincial Authorities</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-lime-600 dark:text-lime-400" />
+              <CheckCircle2 className="w-4 h-4 text-lime-700 dark:text-lime-400" />
               <span>Fast Digital Filing</span>
             </div>
           </div>

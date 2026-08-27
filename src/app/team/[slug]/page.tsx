@@ -156,7 +156,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                     {hasEmail && (
                       <a
                         href={`mailto:${member.email}`}
-                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-royal transition-colors"
+                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-royal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal"
                       >
                         <Mail className="w-4 h-4 text-royal shrink-0" />
                         <span className="truncate">{member.email}</span>
@@ -166,7 +166,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                     {hasPhone && (
                       <a
                         href={`tel:${cleanPhone}`}
-                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-royal transition-colors"
+                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-royal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal"
                       >
                         <Phone className="w-4 h-4 text-royal shrink-0" />
                         <span>
@@ -181,7 +181,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                         href={`https://wa.me/${cleanWa}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-slate-700 dark:text-slate-200 hover:text-emerald-600 transition-colors"
+                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-slate-700 dark:text-slate-200 hover:text-emerald-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                       >
                         <MessageSquare className="w-4 h-4 text-emerald-500 shrink-0" />
                         <span>Direct WhatsApp</span>
@@ -193,7 +193,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                         href={member.li}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950/30 text-slate-700 dark:text-slate-200 hover:text-blue-600 transition-colors"
+                        className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950/30 text-slate-700 dark:text-slate-200 hover:text-blue-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         <LinkedinIcon className="w-4 h-4 text-blue-600 shrink-0" />
                         <span>LinkedIn Profile</span>
@@ -229,7 +229,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                   {member.desig}
                 </p>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-semibold">
-                  <Award className="w-3.5 h-3.5 text-lime-600 dark:text-lime-400" />
+                  <Award className="w-3.5 h-3.5 text-lime-700 dark:text-lime-400" />
                   <span>{member.dept}</span>
                 </div>
               </div>

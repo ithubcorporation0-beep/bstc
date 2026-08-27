@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, Mail, MessageSquare } from "lucide-react";
+import { ArrowRight, ShieldCheck, MessageSquare } from "lucide-react";
 import { getActiveTeam } from "@/data";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -43,7 +43,7 @@ export function TeamGrid() {
 
                 {/* Member Info */}
                 <div className="space-y-1.5">
-                  <div className="text-xs font-bold text-lime-600 dark:text-lime-400 uppercase tracking-wider">
+                  <div className="text-xs font-bold text-lime-700 dark:text-lime-400 uppercase tracking-wider">
                     {member.dept}
                   </div>
                   <h3 className="font-display font-bold text-xl text-ink group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
@@ -62,7 +62,7 @@ export function TeamGrid() {
               <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
                 <Link
                   href={`/team/${member.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors focus-visible:outline-none focus-visible:underline"
                 >
                   <span>View Profile</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +74,7 @@ export function TeamGrid() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Chat with ${member.name} on WhatsApp`}
-                    className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-500 transition-colors"
+                    className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                   >
                     <MessageSquare className="w-4 h-4" />
                   </a>

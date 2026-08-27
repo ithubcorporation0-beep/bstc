@@ -2,28 +2,28 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, ArrowRight, Phone, MessageSquare } from "lucide-react";
 import { siteSettings } from "@/data/settings";
-import Button from "@/components/ui/Button";
 import ThemeToggle from "@/components/layout/ThemeToggle";
+import Button from "@/components/ui/Button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
-  const triggerRef = useRef<HTMLButtonElement | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
-  // Monitor scroll for shadow enhancement
+  // Track scroll position for elevated navbar styling
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Handle Escape key and body scroll lock for mobile menu
+  // Handle ESC key to close mobile menu
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isOpen) {
@@ -33,15 +33,15 @@ export function Navbar() {
     };
 
     if (isOpen) {
-      document.body.style.overflow = "hidden";
-      window.addEventListener("keydown", handleKeyDown);
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden"; // Prevent background scroll
     } else {
       document.body.style.overflow = "";
     }
 
     return () => {
+      document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isOpen]);
 
@@ -79,7 +79,7 @@ export function Navbar() {
               <span className="font-display font-extrabold text-lg sm:text-xl text-ink tracking-tight leading-none group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
                 {siteSettings.siteName}
               </span>
-              <span className="text-[10px] font-semibold text-lime-600 dark:text-lime-400 tracking-wider uppercase leading-tight mt-0.5">
+              <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase leading-tight mt-0.5">
                 Tax Consultants
               </span>
             </div>
@@ -146,7 +146,7 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={closeMenu}
-                  className="px-4 py-3 rounded-2xl text-base font-bold text-ink hover:bg-royal/10 hover:text-royal transition-colors"
+                  className="px-4 py-3 rounded-2xl text-base font-bold text-ink hover:bg-royal/10 hover:text-royal transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal"
                 >
                   {link.label}
                 </Link>
@@ -168,7 +168,7 @@ export function Navbar() {
               <div className="flex items-center justify-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400 pt-2">
                 <a
                   href={`tel:${siteSettings.phone.replace(/[^0-9+]/g, "")}`}
-                  className="flex items-center gap-1.5 hover:text-royal"
+                  className="flex items-center gap-1.5 hover:text-royal focus-visible:outline-none focus-visible:underline"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call Us</span>
@@ -178,7 +178,7 @@ export function Navbar() {
                   href={`https://wa.me/${siteSettings.wa}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 hover:text-lime-600 dark:hover:text-lime-400"
+                  className="flex items-center gap-1.5 hover:text-emerald-600 dark:hover:text-emerald-400 focus-visible:outline-none focus-visible:underline"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>WhatsApp</span>

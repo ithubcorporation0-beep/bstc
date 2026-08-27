@@ -27,6 +27,9 @@ export function Card({
     ? "glass shadow-soft"
     : "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-soft hover:border-royal/30 dark:hover:border-royal-light/30";
 
+  const linkFocusStyles =
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal dark:focus-visible:ring-royal-light focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900";
+
   const combinedClassName = `${baseStyles} ${surfaceStyles} ${liftStyles} ${className}`.trim();
 
   if (href) {
@@ -37,14 +40,14 @@ export function Card({
           href={href}
           target={target || (href.startsWith("http") ? "_blank" : undefined)}
           rel={rel || (href.startsWith("http") ? "noopener noreferrer" : undefined)}
-          className={`block group ${combinedClassName}`}
+          className={`block group ${combinedClassName} ${linkFocusStyles}`}
         >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={`block group ${combinedClassName}`}>
+      <Link href={href} className={`block group ${combinedClassName} ${linkFocusStyles}`}>
         {children}
       </Link>
     );

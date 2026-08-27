@@ -84,7 +84,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Column 1: Company Info & Branding */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2.5 group">
+            <Link href="/" className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1">
               <div className="w-9 h-9 rounded-xl gradient-royal flex items-center justify-center text-white font-extrabold font-display text-lg">
                 B
               </div>
@@ -92,7 +92,7 @@ export function Footer() {
                 <span className="font-display font-extrabold text-xl text-ink leading-none">
                   {siteSettings.siteName}
                 </span>
-                <span className="text-[10px] font-semibold text-lime-600 dark:text-lime-400 tracking-wider uppercase mt-0.5">
+                <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase mt-0.5">
                   Tax Consultants
                 </span>
               </div>
@@ -104,7 +104,7 @@ export function Footer() {
 
             {/* Registered ITP Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-semibold text-royal dark:text-royal-light shadow-sm">
-              <ShieldCheck className="w-4 h-4 text-lime-600 dark:text-lime-400" />
+              <ShieldCheck className="w-4 h-4 text-lime-700 dark:text-lime-400" />
               <span>Registered Income Tax Practitioner (ITP)</span>
             </div>
 
@@ -120,7 +120,7 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={soc.name}
-                      className="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-royal hover:border-royal flex items-center justify-center transition-colors shadow-sm"
+                      className="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-royal hover:border-royal flex items-center justify-center transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal"
                     >
                       <IconComp className="w-4 h-4" />
                     </a>
@@ -140,7 +140,7 @@ export function Footer() {
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group"
+                    className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded p-0.5"
                   >
                     <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-royal group-hover:translate-x-0.5 transition-all" />
                     <span>{service.title}</span>
@@ -160,7 +160,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group"
+                    className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded p-0.5"
                   >
                     <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-royal group-hover:translate-x-0.5 transition-all" />
                     <span>{link.label}</span>
@@ -184,7 +184,7 @@ export function Footer() {
                 <Phone className="w-4 h-4 text-royal shrink-0" />
                 <a
                   href={`tel:${siteSettings.phone.replace(/[^0-9+]/g, "")}`}
-                  className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium"
+                  className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium focus-visible:outline-none focus-visible:underline"
                 >
                   {siteSettings.phone}
                 </a>
@@ -193,7 +193,7 @@ export function Footer() {
                 <Mail className="w-4 h-4 text-royal shrink-0" />
                 <a
                   href={`mailto:${siteSettings.email}`}
-                  className="hover:text-royal dark:hover:text-royal-light transition-colors"
+                  className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
                 >
                   {siteSettings.email}
                 </a>
@@ -214,13 +214,13 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <Link
               href="/privacy"
-              className="hover:text-royal dark:hover:text-royal-light transition-colors"
+              className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="hover:text-royal dark:hover:text-royal-light transition-colors"
+              className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
             >
               Terms of Service
             </Link>

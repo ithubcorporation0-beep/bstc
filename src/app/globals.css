@@ -65,6 +65,7 @@
   --color-royal-light: var(--royal-light);
   --color-lime: var(--lime);
   --color-lime-bright: var(--lime-bright);
+  --color-lime-text: var(--lime-text);
   --color-ink: var(--ink);
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -78,6 +79,8 @@
   --royal-light: #3b82f6;
   --lime: #84cc16;
   --lime-bright: #a3e635;
+  /* Darkened lime text token for light mode to achieve 7.2:1 WCAG AAA contrast on white */
+  --lime-text: #3f6212;
   --ink: #0a0a0a;
 
   /* Fonts */
@@ -99,6 +102,7 @@
   --royal-light: #60a5fa;
   --lime: #84cc16;
   --lime-bright: #a3e635;
+  --lime-text: #a3e635;
   --ink: #f8fafc;
 
   /* Theme Background & Text */
