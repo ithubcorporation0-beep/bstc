@@ -99,3 +99,28 @@ npm run build
 # Start production server
 npm run start
 ```
+
+---
+
+## 🏷️ Git Workflow & Commit Rules
+
+After every single prompt or task, commit using the standard format:
+```bash
+git add -A
+git commit -m "type: description"
+git push
+```
+
+### Message Format: `type: description` (lowercase, present tense)
+
+| Type | Use for | Example |
+| :--- | :--- | :--- |
+| `chore` | Setup, config, tooling | `chore: configure tailwind tokens` |
+| `feat` | A new thing that works | `feat: add floating whatsapp button` |
+| `fix` | Repairing something broken | `fix: resolve icon typing error` |
+| `content` | Text and data changes in `src/data/` | `content: update office phone number` |
+| `style` | Visual only, no behaviour change | `style: improve glassmorphism contrast` |
+| `perf` | Speed & optimization | `perf: optimize static page generation` |
+| `a11y` | Accessibility improvements | `a11y: add aria labels to mobile drawer` |
+| `docs` | Documentation updates | `docs: add client content guide` |
+

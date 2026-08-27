@@ -14,9 +14,25 @@
 - `docs/`: Client guides (`CONTENT-GUIDE.md`), open items tracker (`OPEN-ITEMS.md`), and developer handover (`HANDOVER.md`).
 
 ## 3. Git Workflow
-- Always make atomic, semantic commits: `git add -A && git commit -m "type: summary"`.
+- Always make atomic, semantic commits after every prompt:
+  ```bash
+  git add -A
+  git commit -m "type: description"
+  git push
+  ```
+- **Message format**: `type: description` (strictly lowercase, present tense).
+- **Commit Types**:
+  - `chore`: Setup, config, tooling
+  - `feat`: A new thing that works
+  - `fix`: Repairing something broken
+  - `content`: Text and data changes
+  - `style`: Visual only, no behaviour change
+  - `perf`: Speed
+  - `a11y`: Accessibility
+  - `docs`: Documentation
 
 ## 4. Code Standards
 - Strict TypeScript (`strict: true`). Zero `any` types unless explicitly justified.
 - Tailwind CSS v4 design tokens and semantic classes.
 - Full mobile responsiveness, accessibility standards (ARIA labels, keyboard navigation), and light/dark theme support.
+
