@@ -6,6 +6,9 @@ import ServicesGrid from "@/components/home/ServicesGrid";
 import HowWeWork from "@/components/home/HowWeWork";
 import WhyChoose from "@/components/home/WhyChoose";
 import TeamGrid from "@/components/home/TeamGrid";
+import Testimonials from "@/components/home/Testimonials";
+import FaqSection from "@/components/home/FaqSection";
+import ContactSection from "@/components/home/ContactSection";
 
 export default function HomePage() {
   return (
@@ -17,6 +20,9 @@ export default function HomePage() {
       <HowWeWork />
       <WhyChoose />
       <TeamGrid />
+      <Testimonials />
+      <FaqSection />
+      <ContactSection />
     </>
   );
 }
