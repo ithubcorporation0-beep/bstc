@@ -6,12 +6,12 @@ import {
   MapPin,
   Clock,
   ExternalLink,
-  ShieldCheck,
   CalendarCheck,
 } from "lucide-react";
 import { siteSettings } from "@/data/settings";
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
+import ConsultationForm from "@/components/forms/ConsultationForm";
 
 export function ContactSection() {
   const cleanPhone = siteSettings.phone.replace(/[^0-9+]/g, "");
@@ -115,7 +115,6 @@ export function ContactSection() {
                   <p className="text-sm font-semibold text-ink leading-snug">
                     {siteSettings.address}
                   </p>
-                  {/* Google Maps link: only rendered if non-empty URL per PRD §9 O13 */}
                   {hasValidMapLink && (
                     <a
                       href={siteSettings.mapsLink}
@@ -148,13 +147,12 @@ export function ContactSection() {
           </Reveal>
         </div>
 
-        {/* Right Column: Form Container (7 cols) */}
+        {/* Right Column: Live Interactive Consultation Form (7 cols) */}
         <div className="lg:col-span-7">
           <Reveal delay={200} direction="left">
-            {/* ConsultationForm goes here — Prompt 18 */}
-            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-8 sm:p-10 shadow-soft-lg space-y-6">
-              <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
-                <div className="w-10 h-10 rounded-xl gradient-royal flex items-center justify-center text-white">
+            <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-7 sm:p-10 shadow-soft-lg space-y-6">
+              <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-5">
+                <div className="w-10 h-10 rounded-xl gradient-royal flex items-center justify-center text-white shadow-sm">
                   <CalendarCheck className="w-5 h-5" />
                 </div>
                 <div>
@@ -162,23 +160,13 @@ export function ContactSection() {
                     Book Online Consultation
                   </h3>
                   <p className="text-xs text-slate-500">
-                    Fill in your details for a fast response within 2 business hours.
+                    Direct advisory with certified Income Tax Practitioners (ITPs).
                   </p>
                 </div>
               </div>
 
-              {/* Form Placeholder Container */}
-              <div className="py-12 px-6 rounded-2xl border-2 border-dashed border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-royal/10 text-royal dark:bg-royal/20 dark:text-royal-light flex items-center justify-center mx-auto">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <div className="text-sm font-bold text-ink">
-                  Consultation Inquiry Form
-                </div>
-                <p className="text-xs text-slate-500 max-w-sm mx-auto leading-relaxed">
-                  Interactive multi-service consultation submission form will be integrated in Prompt 18.
-                </p>
-              </div>
+              {/* Live Interactive Form Component */}
+              <ConsultationForm />
             </div>
           </Reveal>
         </div>
