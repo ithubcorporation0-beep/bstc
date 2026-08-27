@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== Self-Hosted Typography (@font-face) ===== */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-800.woff2') format('woff2');
+}
+
+@theme {
+  --color-royal: var(--royal);
+  --color-royal-dark: var(--royal-dark);
+  --color-royal-light: var(--royal-light);
+  --color-lime: var(--lime);
+  --color-lime-bright: var(--lime-bright);
+  --color-ink: var(--ink);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+:root {
+  /* PRD §8 Color Tokens */
+  --royal: #1d4ed8;
+  --royal-dark: #1e3a8a;
+  --royal-light: #3b82f6;
+  --lime: #84cc16;
+  --lime-bright: #a3e635;
+  --ink: #0a0a0a;
+
+  /* Fonts */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+  /* Theme Background & Text */
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --border: #e2e8f0;
+}
+
+.dark {
+  /* PRD §8 Dark Mode Values */
+  --royal: #2563eb;
+  --royal-dark: #1e3a8a;
+  --royal-light: #60a5fa;
+  --lime: #84cc16;
+  --lime-bright: #a3e635;
+  --ink: #f8fafc;
+
+  /* Theme Background & Text */
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
+  --card: #0f172a;
+  --card-foreground: #f8fafc;
+  --border: #1e293b;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* ===== PRD §8 Reusable Effect Classes ===== */
+
+/* 1. Glass: backdrop-blur 16px over translucent white in light mode, near-black in dark */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass {
+  background: rgba(10, 10, 14, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-nav {
+  background: rgba(10, 10, 14, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 2. Gradient Royal: 135deg royal-dark to royal at 55% to royal-light */
+.gradient-royal,
+.grad-royal {
+  background: linear-gradient(135deg, var(--royal-dark), var(--royal) 55%, var(--royal-light));
+}
+
+/* 3. Gradient Text: 120deg royal-light to lime-bright, clipped to text */
+.gradient-text,
+.grad-text {
+  background: linear-gradient(120deg, var(--royal-light), var(--lime-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-lime,
+.grad-lime {
+  background: linear-gradient(135deg, var(--lime), var(--lime-bright));
+}
+
+/* 4. Lift: subtle translateY plus shadow on hover */
+.lift {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.lift:hover {
+  transform: translateY(-8px);
+}
+
+/* Soft Shadows */
+.shadow-soft {
+  box-shadow: 0 10px 40px -12px rgba(29, 78, 216, 0.25), 0 4px 12px -6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 30px 70px -20px rgba(29, 78, 216, 0.35), 0 8px 20px -8px rgba(0, 0, 0, 0.15);
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 100;
+  background: linear-gradient(90deg, var(--royal), var(--lime-bright));
+}
+
+/* ===== 5. Accessibility: Prefers Reduced Motion Guard ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .lift {
+    transition: none !important;
+  }
+
+  .lift:hover {
+    transform: none !important;
+  }
+}
