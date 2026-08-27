@@ -1,7 +1,27 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Sparkles, MoveUpRight, CheckCircle2 } from "lucide-react";
+import {
+  Sun,
+  Moon,
+  Sparkles,
+  MoveUpRight,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  Calculator,
+  Building2,
+  FileText,
+  Users,
+  Award,
+} from "lucide-react";
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
+import Section from "@/components/ui/Section";
+import Accordion from "@/components/ui/Accordion";
+import Reveal from "@/components/ui/Reveal";
+import CountUp from "@/components/ui/CountUp";
+import Icon from "@/components/ui/Icon";
 
 export default function StyleguidePage() {
   const [isDark, setIsDark] = useState(false);
@@ -94,6 +114,46 @@ export default function StyleguidePage() {
     { weight: 800, label: "ExtraBold (800)", sample: "BSTC — 100% Compliant & Registered" },
   ];
 
+  const faqItems = [
+    {
+      id: "faq-1",
+      question: "What documents are required for individual income tax return filing in Pakistan?",
+      answer:
+        "For salaried individuals, you will need your salary certificate / pay slips, bank account statements for the tax year (July 1 to June 30), tax deduction certificates from utilities and telecom providers, vehicle registration details, and records of any assets bought or sold during the financial year. Our certified consultants assist in organizing all necessary documentation.",
+    },
+    {
+      id: "faq-2",
+      question: "How long does SECP private limited company incorporation take?",
+      answer:
+        "The standard SECP private limited company registration process typically takes between 3 to 7 working days once all subscriber CNICs, proposed business names, digital signatures, and memorandum/articles of association are submitted through the eServices portal.",
+    },
+    {
+      id: "faq-3",
+      question: "What is the difference between an Active Taxpayer (ATL) and Non-Active status?",
+      answer:
+        "Active Taxpayer List (ATL) status gives individuals and businesses access to lower withholding tax rates on banking transactions, vehicle token tax, property purchases, and import/export activities. Non-filers face double or punitive withholding tax rates on everyday financial transactions.",
+    },
+  ];
+
+  const iconsShowcase = [
+    "ShieldCheck",
+    "Calculator",
+    "Building2",
+    "FileText",
+    "Users",
+    "Award",
+    "Scale",
+    "FileSpreadsheet",
+    "TrendingUp",
+    "Briefcase",
+    "Sparkles",
+    "Phone",
+    "Mail",
+    "MapPin",
+    "Clock",
+    "CheckCircle2",
+  ];
+
   return (
     <div className="min-h-screen p-6 sm:p-10 md:p-16 max-w-6xl mx-auto space-y-16">
       {/* Header with Theme Toggle */}
@@ -104,14 +164,14 @@ export default function StyleguidePage() {
               PRD §8
             </span>
             <span className="text-xs font-semibold text-lime dark:text-lime-bright uppercase tracking-wider">
-              Design System &amp; Tokens
+              Design System &amp; Base Components
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-ink mt-2">
-            BSTC Styleguide &amp; Visual Audit
+            BSTC Styleguide &amp; Component Library
           </h1>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Visual verification of color tokens, self-hosted typography, and PRD §8 effect classes.
+            Visual verification of color tokens, self-hosted typography, and base UI components.
           </p>
         </div>
 
@@ -136,15 +196,207 @@ export default function StyleguidePage() {
         )}
       </header>
 
-      {/* 1. Colour Swatches */}
+      {/* 1. Base UI Components */}
+      <section className="space-y-12">
+        <div>
+          <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
+            <Sparkles className="w-5 h-5 text-royal" />
+            <span>1. Base UI Components (src/components/ui/)</span>
+          </h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+            Reusable, fully typed, accessible components styled with design tokens.
+          </p>
+        </div>
+
+        {/* 1.1 Button Component */}
+        <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-6">
+          <div className="border-b border-slate-100 dark:border-slate-800 pb-3">
+            <h3 className="font-bold text-lg text-ink">1.1 Button (Button.tsx)</h3>
+            <p className="text-xs text-slate-500">Variants, sizes, and polymorphic Next.js Link support.</p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex flex-wrap items-center gap-4">
+              <Button variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
+                Primary Large
+              </Button>
+              <Button variant="primary" size="md">
+                Primary Medium
+              </Button>
+              <Button variant="primary" size="sm">
+                Primary Small
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <Button variant="secondary" size="md">
+                Secondary Outline
+              </Button>
+              <Button variant="ghost" size="md">
+                Ghost Action
+              </Button>
+              <Button variant="lime" size="md" icon={<Sparkles className="w-4 h-4" />}>
+                Lime Accent CTA
+              </Button>
+              <Button variant="primary" size="md" href="#cards" icon={<ArrowRight className="w-4 h-4" />}>
+                Rendered as &lt;Link&gt;
+              </Button>
+              <Button variant="primary" size="md" disabled>
+                Disabled State
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* 1.2 Card Component */}
+        <div id="cards" className="space-y-4">
+          <h3 className="font-bold text-lg text-ink">1.2 Card (Card.tsx)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card>
+              <div className="w-10 h-10 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-4">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-base text-ink mb-1">Standard Surface Card</h4>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                Rounded-2xl surface with subtle border, dark mode support, and .lift hover elevation.
+              </p>
+            </Card>
+
+            <Card href="#faq" className="cursor-pointer">
+              <div className="w-10 h-10 rounded-xl bg-lime/20 text-lime-700 dark:text-lime-400 flex items-center justify-center mb-4">
+                <MoveUpRight className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-base text-ink mb-1 group-hover:text-royal transition-colors">
+                Interactive Link Card
+              </h4>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                Pass an href prop to automatically wrap the entire card in an accessible Next.js Link.
+              </p>
+            </Card>
+
+            <Card glass>
+              <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h4 className="font-bold text-base text-ink mb-1">Glassmorphic Card</h4>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                Pass glass=&#123;true&#125; for 16px backdrop blur over translucent white or near-black.
+              </p>
+            </Card>
+          </div>
+        </div>
+
+        {/* 1.3 Section Component */}
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 overflow-hidden">
+          <Section
+            eyebrow="Section Component"
+            heading="Consistent Spacing & Containers"
+            description="Section.tsx standardizes vertical padding, max-width containers, and header layouts."
+            centered
+            className="py-12 sm:py-16"
+          >
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 text-center text-xs font-mono text-slate-500">
+              [ Section Inner Children Container Slot ]
+            </div>
+          </Section>
+        </div>
+
+        {/* 1.4 Accordion Component */}
+        <div id="faq" className="space-y-4">
+          <div>
+            <h3 className="font-bold text-lg text-ink">1.4 Accordion (Accordion.tsx)</h3>
+            <p className="text-xs text-slate-500">
+              Natural dynamic height animation (zero clipping), aria attributes, keyboard navigation.
+            </p>
+          </div>
+          <Accordion items={faqItems} defaultOpenId="faq-1" />
+        </div>
+
+        {/* 1.5 Reveal & CountUp Components */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Reveal */}
+          <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4">
+            <h3 className="font-bold text-lg text-ink">1.5 Reveal (Reveal.tsx)</h3>
+            <p className="text-xs text-slate-500">
+              IntersectionObserver fade-in &amp; slide-up with staggering delay.
+            </p>
+            <div className="grid grid-cols-3 gap-3">
+              <Reveal delay={100}>
+                <div className="p-3 rounded-xl bg-royal/10 text-royal text-center text-xs font-bold">
+                  Delay 100ms
+                </div>
+              </Reveal>
+              <Reveal delay={250}>
+                <div className="p-3 rounded-xl bg-royal/10 text-royal text-center text-xs font-bold">
+                  Delay 250ms
+                </div>
+              </Reveal>
+              <Reveal delay={400}>
+                <div className="p-3 rounded-xl bg-royal/10 text-royal text-center text-xs font-bold">
+                  Delay 400ms
+                </div>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* CountUp */}
+          <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4">
+            <h3 className="font-bold text-lg text-ink">1.6 CountUp (CountUp.tsx)</h3>
+            <p className="text-xs text-slate-500">
+              Scroll-triggered metric counters with cubic ease-out animation.
+            </p>
+            <div className="grid grid-cols-3 gap-3 text-center">
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <div className="text-2xl font-extrabold text-royal dark:text-royal-light font-display">
+                  <CountUp value={15} suffix="+" />
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">Years Experience</div>
+              </div>
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <div className="text-2xl font-extrabold text-lime-600 dark:text-lime-400 font-display">
+                  <CountUp value={500} suffix="+" />
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">Clients Served</div>
+              </div>
+              <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <div className="text-2xl font-extrabold text-ink font-display">
+                  <CountUp value={100} suffix="%" />
+                </div>
+                <div className="text-[10px] text-slate-500 mt-1">FBR Compliance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 1.7 Icon Mapper */}
+        <div className="p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-4">
+          <h3 className="font-bold text-lg text-ink">1.7 Icon Mapper (Icon.tsx)</h3>
+          <p className="text-xs text-slate-500">
+            Maps string names from static data files to individually imported Lucide icons.
+          </p>
+          <div className="grid grid-cols-4 sm:grid-cols-8 gap-3">
+            {iconsShowcase.map((name) => (
+              <div
+                key={name}
+                className="flex flex-col items-center justify-center p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-center gap-1.5"
+              >
+                <Icon name={name} className="w-5 h-5 text-royal dark:text-royal-light" />
+                <span className="text-[10px] font-mono text-slate-500 truncate w-full">{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Colour Swatches */}
       <section className="space-y-6">
         <div>
           <h2 className="text-2xl font-bold text-ink flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-royal" />
-            <span>1. Colour Palette (PRD §8)</span>
+            <span>2. Colour Palette (PRD §8)</span>
           </h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            CSS custom properties mapped to Tailwind utility classes (e.g. <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-royal">bg-royal</code>, <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-lime">text-lime</code>).
+            CSS custom properties mapped to Tailwind utility classes.
           </p>
         </div>
 
@@ -174,12 +426,12 @@ export default function StyleguidePage() {
         </div>
       </section>
 
-      {/* 2. Typography (Inter & Plus Jakarta Sans) */}
+      {/* 3. Typography (Inter & Plus Jakarta Sans) */}
       <section className="space-y-8">
         <div>
-          <h2 className="text-2xl font-bold text-ink">2. Self-Hosted Typography</h2>
+          <h2 className="text-2xl font-bold text-ink">3. Self-Hosted Typography</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Self-hosted .woff2 font files in <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">public/fonts/</code> using <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">next/font/local</code>.
+            Self-hosted .woff2 font files in <code className="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">public/fonts/</code>.
           </p>
         </div>
 
@@ -229,69 +481,6 @@ export default function StyleguidePage() {
         </div>
       </section>
 
-      {/* 3. Effects & Utility Classes */}
-      <section className="space-y-6">
-        <div>
-          <h2 className="text-2xl font-bold text-ink">3. PRD §8 Reusable Effects</h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Classes for glassmorphic containers, gradients, hover lift elevations, and soft shadows.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Glass */}
-          <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/40 to-slate-900/40 relative overflow-hidden border border-slate-300 dark:border-slate-800">
-            <div className="glass p-6 rounded-xl space-y-3">
-              <span className="text-xs font-bold font-mono px-2 py-0.5 rounded bg-royal text-white">
-                .glass
-              </span>
-              <h3 className="text-lg font-bold text-ink">Glassmorphic Container</h3>
-              <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                Backdrop filter blur 16px over translucent white (light) and near-black (dark) with a subtle border.
-              </p>
-            </div>
-          </div>
-
-          {/* Gradient Royal */}
-          <div className="gradient-royal p-8 rounded-2xl text-white space-y-3 shadow-md">
-            <span className="text-xs font-bold font-mono px-2 py-0.5 rounded bg-white/20 text-white">
-              .gradient-royal
-            </span>
-            <h3 className="text-lg font-bold">135° Royal Gradient</h3>
-            <p className="text-xs text-blue-100 leading-relaxed">
-              Linear gradient from royal-dark (#1e3a8a) to royal (#1d4ed8) at 55% to royal-light (#3b82f6).
-            </p>
-          </div>
-
-          {/* Gradient Text */}
-          <div className="p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 space-y-3">
-            <span className="text-xs font-bold font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-royal">
-              .gradient-text
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold gradient-text">
-              120° Royal to Lime Bright Gradient Text
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              Text clipped gradient running from royal-light into vibrant lime-bright.
-            </p>
-          </div>
-
-          {/* Lift Effect */}
-          <div className="lift p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-soft hover:shadow-soft-lg space-y-3 cursor-pointer">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold font-mono px-2 py-0.5 rounded bg-lime text-slate-950">
-                .lift
-              </span>
-              <MoveUpRight className="w-4 h-4 text-royal" />
-            </div>
-            <h3 className="text-lg font-bold text-ink">Hover Me for Lift Elevation</h3>
-            <p className="text-xs text-slate-600 dark:text-slate-400">
-              Smooth translateY(-8px) with cubic-bezier easing and responsive soft shadow.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* 4. Prototype Comparison Notes */}
       <section className="p-6 sm:p-8 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/60 space-y-4">
         <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
@@ -309,10 +498,10 @@ export default function StyleguidePage() {
             <strong>Class-Based Dark Mode</strong>: Driven by the <code className="font-mono">.dark</code> class on <code className="font-mono">&lt;html&gt;</code> with zero flash on initial load.
           </li>
           <li>
-            <strong>Effects Parity</strong>: Reusable utility classes for <code className="font-mono">.glass</code>, <code className="font-mono">.gradient-royal</code>, <code className="font-mono">.gradient-text</code>, and <code className="font-mono">.lift</code> replicate prototype styling.
+            <strong>Accordion Height Fix</strong>: Replaced prototype&apos;s clipped <code className="font-mono">max-h-40</code> with CSS grid row transition to guarantee full unclipped content rendering.
           </li>
           <li>
-            <strong>Reduced Motion Guard</strong>: Disables transforms and animations when <code className="font-mono">prefers-reduced-motion: reduce</code> is active.
+            <strong>Reduced Motion Guard</strong>: Automatically disables transforms and animations when <code className="font-mono">prefers-reduced-motion: reduce</code> is active.
           </li>
         </ul>
       </section>
