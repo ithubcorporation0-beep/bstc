@@ -4,6 +4,8 @@ import { siteSettings } from "@/data/settings";
 import ThemeScript from "@/components/layout/ThemeScript";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import FloatingButtons from "@/components/layout/FloatingButtons";
 
 export const metadata: Metadata = {
   title: siteSettings.seoTitle,
@@ -23,10 +25,12 @@ export default function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-[#0a0a0a] dark:text-[#f8fafc]">
+      <body className="antialiased min-h-screen flex flex-col bg-white dark:bg-[#0a0a0a] text-[#0a0a0a] dark:text-[#f8fafc] relative">
+        <ScrollProgress />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   );
