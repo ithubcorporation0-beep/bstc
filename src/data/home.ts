@@ -27,7 +27,7 @@ export const homeContent: HomeContent = {
       "Founded and led by Hassan Zeb, a Registered Income Tax Practitioner (ITP), BSTC was established with one mission: Tax compliance and corporate registration should never be confusing, slow, or uncertain.",
     desc:
       "For over a decade, we have helped salaried individuals, freelancers, commercial traders, startups, and established enterprises across Pakistan navigate tax compliance, corporate registrations, bookkeeping, and financial reporting with total confidence.\n\nWhether you need seamless annual income tax return filing, provincial sales tax handling, or SECP private limited company incorporation, our dedicated practitioners manage the complexities so you can focus on building your business.",
-    img: "/images/about-showcase.svg",
+    img: "/images/about-showcase.svg", // TODO(O11): Replace local placeholder with verified client office/team photo (PRD O11 Unsplash eliminated)
     cards: [
       {
         title: "Registered ITP Leadership",
