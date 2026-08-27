@@ -13,12 +13,12 @@ export function About() {
     {
       icon: ShieldCheck,
       title: "Certified Experts",
-      desc: "Registered Income Tax Practitioners (ITPs) with over a decade of regulatory experience.",
+      desc: "Registered Income Tax Practitioners (ITPs) with over 20 years of regulatory experience.",
     },
     {
       icon: Award,
       title: "Trusted Services",
-      desc: "Proven track record with 1,500+ satisfied individual, SME, and corporate clients.",
+      desc: "Proven track record with 15,000+ satisfied individual, SME, and corporate clients.",
     },
     {
       icon: Users,

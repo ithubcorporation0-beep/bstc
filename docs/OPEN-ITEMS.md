@@ -18,7 +18,7 @@ This live tracker documents all items requiring authentic content, credentials, 
 | **O12** | YouTube Channel URL (`src/data/settings.ts`) | `https://youtube.com` | Official YouTube channel URL (if applicable). | 🟡 Open | — |
 | **O13** | Client Testimonials & Reviews (`src/data/home.ts`) | Generic client names & text | 3–6 real client testimonials with client names, business titles, and authentic review quotes. | 🟡 Open | — |
 | **O14** | Consultant Headshots (`public/images/team/`) | SVG avatar placeholders | Real professional portrait photos for Hassan Zeb, Ahmed Ali, Sarah Khan. | 🟡 Open | — |
-| **O15** | Firm Statistics (`src/data/home.ts`) | `12+ yrs, 1500+ clients, 2400+ projects, 4500+ returns` | Verified numerical metrics for the homepage counter bar. | 🟡 Open | — |
+| **O15** | Firm Statistics (`src/data/home.ts`) | `20+ yrs, 15,000+ clients, 24,000+ projects, 45,000+ returns` | Verified numerical metrics for the homepage counter bar. | 🟢 Resolved | 2026-08-27 |
 | **O16** | Google Analytics 4 ID (`src/data/settings.ts`) | `G-XXXXXXXXXX` | Client's Google Analytics 4 Measurement ID (`G-...`) for live traffic tracking. | 🟡 Open | — |
 
 ---

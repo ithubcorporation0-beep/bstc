@@ -16,17 +16,17 @@ export const homeContent: HomeContent = {
     bg: "",
   },
   stats: [
-    { label: "Years Experience", value: 12, suffix: "+" }, // TODO(O15): real verified metrics from client
-    { label: "Clients Served", value: 1500, suffix: "+" }, // TODO(O15): real verified metrics from client
-    { label: "Projects Completed", value: 2400, suffix: "+" }, // TODO(O15): real verified metrics from client
-    { label: "Returns Filed", value: 4500, suffix: "+" }, // TODO(O15): real verified metrics from client
+    { label: "Years Experience", value: 20, suffix: "+" },
+    { label: "Clients Served", value: 15000, suffix: "+" },
+    { label: "Projects Completed", value: 24000, suffix: "+" },
+    { label: "Returns Filed", value: 45000, suffix: "+" },
   ],
   about: {
     title: "About Business Solutions Tax Consultants",
     intro:
       "Founded and led by Hassan Zeb, a Registered Income Tax Practitioner (ITP), BSTC was established with one mission: Tax compliance and corporate registration should never be confusing, slow, or uncertain.",
     desc:
-      "For over a decade, we have helped salaried individuals, freelancers, commercial traders, startups, and established enterprises across Pakistan navigate tax compliance, corporate registrations, bookkeeping, and financial reporting with total confidence.\n\nWhether you need seamless annual income tax return filing, provincial sales tax handling, or SECP private limited company incorporation, our dedicated practitioners manage the complexities so you can focus on building your business.",
+      "For over two decades, we have helped salaried individuals, freelancers, commercial traders, startups, and established enterprises across Pakistan navigate tax compliance, corporate registrations, bookkeeping, and financial reporting with total confidence.\n\nWhether you need seamless annual income tax return filing, provincial sales tax handling, or SECP private limited company incorporation, our dedicated practitioners manage the complexities so you can focus on building your business.",
     img: "/images/about-consultant.jpg",
     cards: [
       {

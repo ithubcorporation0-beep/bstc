@@ -11,7 +11,7 @@ export const team: TeamMember[] = [
     desig: "CEO & Principal Tax Consultant (ITP)",
     dept: "Direct Taxation & Corporate Advisory",
     shortDesc: "Registered Income Tax Practitioner (ITP) leading corporate tax strategy and SECP compliance.",
-    bio: "Hassan Zeb is a Registered Income Tax Practitioner (ITP) with over 12 years of specialized experience in corporate taxation, FBR compliance, and SECP regulations. He founded BSTC to simplify the complex regulatory landscape for Pakistani businesses, helping over 1,500 clients achieve full tax compliance and seamless company incorporations.",
+    bio: "Hassan Zeb is a Registered Income Tax Practitioner (ITP) with over 20 years of specialized experience in corporate taxation, FBR compliance, and SECP regulations. He founded BSTC to simplify the complex regulatory landscape for Pakistani businesses, helping over 15,000 clients achieve full tax compliance and seamless company incorporations.",
     email: "bs.taxconsultants@gmail.com",
     phone: "+92 333 9860439",
     ext: "101",
