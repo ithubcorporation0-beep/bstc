@@ -102,7 +102,7 @@ export const services: Service[] = [
     seoDesc: "Complete Sales Tax Registration Number (STRN) procurement for commercial importers, manufacturers, and service providers.",
     status: "active",
     order: 6,
-    banner: "/images/services/sales-tax-registration.jpg",
+    banner: "/images/services/sales-tax-reg.jpg",
   },
   {
     slug: "secp-registration",
@@ -134,7 +134,7 @@ export const services: Service[] = [
     seoDesc: "Complete Punjab Revenue Authority tax enrollment and monthly compliance for service businesses in Punjab.",
     status: "active",
     order: 8,
-    banner: "/images/services/pra-registration.jpg",
+    banner: "/images/services/pra-revenue.jpg",
   },
   {
     slug: "kpra-registration",
@@ -150,7 +150,7 @@ export const services: Service[] = [
     seoDesc: "Official Khyber Pakhtunkhwa Revenue Authority tax registration and advisory for hotels, contractors, and service providers.",
     status: "active",
     order: 9,
-    banner: "/images/services/kpra-registration.jpg",
+    banner: "/images/services/kpra-revenue.jpg",
   },
   {
     slug: "bra-registration",
@@ -166,7 +166,7 @@ export const services: Service[] = [
     seoDesc: "Balochistan Revenue Authority sales tax on services registration, withholding tax guidance, and monthly filing.",
     status: "active",
     order: 10,
-    banner: "/images/services/bra-registration.jpg",
+    banner: "/images/services/bra-revenue.jpg",
   },
   {
     slug: "srb-registration",
@@ -182,7 +182,7 @@ export const services: Service[] = [
     seoDesc: "Sindh Revenue Board (SRB) registration, e-filing, and compliance for corporate entities and service providers in Sindh.",
     status: "active",
     order: 11,
-    banner: "/images/services/srb-registration.jpg",
+    banner: "/images/services/srb-revenue.jpg",
   },
   {
     slug: "pec-registration",
