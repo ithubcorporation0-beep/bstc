@@ -59,8 +59,8 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass-nav shadow-soft border-b border-slate-200/80 dark:border-slate-800/80"
-          : "glass-nav border-b border-transparent"
+          ? "bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-xl shadow-soft border-b border-slate-200/90 dark:border-slate-800/90"
+          : "bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800/60"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -9,7 +9,7 @@ export function Hero() {
   const hasBgImage = Boolean(hero.bg && hero.bg.trim() !== "");
 
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
+    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28">
       {/* Background Layer: Image Overlay or Ambient Radial Gradient */}
       {hasBgImage ? (
         <div className="absolute inset-0 z-0 overflow-hidden">

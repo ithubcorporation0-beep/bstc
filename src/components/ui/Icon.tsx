@@ -46,6 +46,7 @@ import {
   Lock,
   RefreshCw,
   Search,
+  Compass,
   LucideProps,
   LucideIcon,
 } from "lucide-react";
@@ -98,6 +99,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Lock,
   RefreshCw,
   Search,
+  Compass,
 };
 
 export type IconName = keyof typeof ICON_MAP | string;

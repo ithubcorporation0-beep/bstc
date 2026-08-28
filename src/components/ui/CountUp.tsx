@@ -19,7 +19,7 @@ export function CountUp({
   decimals = 0,
   className = "",
 }: CountUpProps) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(value);
   const ref = useRef<HTMLSpanElement | null>(null);
   const animatedRef = useRef(false);
 
