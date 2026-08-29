@@ -19,7 +19,7 @@ export const services: Service[] = [
     process: [],
     faqs: [],
     seoTitle: "Income Tax Return Filing in Pakistan | Individual & Corporate Tax | BSTC",
-    seoDesc: "Professional income tax return filing for individuals, salaried employees, AOPs, and private companies in Pakistan. Led by Hassan Zeb (Registered ITP).",
+    seoDesc: "Professional income tax return filing for individuals, salaried employees, AOPs, and private companies in Pakistan. Led by Javed Hussain (Owner & Income Tax Practitioner).",
     status: "active",
     order: 1,
   },

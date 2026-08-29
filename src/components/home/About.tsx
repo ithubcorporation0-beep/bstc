@@ -87,10 +87,10 @@ export function About() {
                   </div>
                   <div>
                     <div className="font-display font-extrabold text-xs sm:text-sm text-ink leading-tight">
-                      Hassan Zeb (ITP)
+                      Javed Hussain (ITP)
                     </div>
                     <div className="text-[11px] font-bold text-lime-700 dark:text-lime-400 mt-0.5">
-                      Registered Tax Practitioner
+                      Owner &amp; Tax Practitioner
                     </div>
                   </div>
                 </div>
