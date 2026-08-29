@@ -254,28 +254,40 @@ export default async function TeamMemberPage({ params }: PageProps) {
               <Card className="p-8 bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 space-y-4">
                 <h3 className="font-display font-bold text-lg text-ink flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5 text-royal dark:text-royal-light" />
-                  <span>Key Advisory Competencies</span>
+                  <span>Key Practice Areas &amp; Competencies</span>
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-royal" />
-                    <span>Income Tax &amp; Wealth Statement Reconciliation</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-royal" />
-                    <span>SECP Incorporation &amp; Corporate Governance</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-royal" />
-                    <span>Multi-Provincial Sales Tax (PRA, SRB, KPRA, BRA)</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-royal" />
-                    <span>FBR Audit Representation &amp; Notice Appeals</span>
-                  </li>
+                  {(member.practiceAreas && member.practiceAreas.length > 0
+                    ? member.practiceAreas
+                    : [
+                        "Income Tax & Wealth Statement Reconciliation",
+                        "SECP Incorporation & Corporate Governance",
+                        "Multi-Provincial Sales Tax (PRA, SRB, KPRA, BRA)",
+                        "FBR Audit Representation & Notice Appeals",
+                      ]
+                  ).map((area, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-royal shrink-0" />
+                      <span>{area}</span>
+                    </li>
+                  ))}
                 </ul>
               </Card>
             </Reveal>
+
+            {/* Client Commitment / Advisory Mission */}
+            {member.commitment && (
+              <Reveal delay={350}>
+                <div className="p-6 rounded-2xl bg-royal/5 dark:bg-royal/15 border-l-4 border-royal text-slate-800 dark:text-slate-200 shadow-sm">
+                  <p className="text-xs font-bold uppercase tracking-wider text-royal dark:text-royal-light mb-1.5">
+                    Our Commitment
+                  </p>
+                  <p className="text-sm sm:text-base font-semibold leading-relaxed">
+                    &ldquo;{member.commitment}&rdquo;
+                  </p>
+                </div>
+              </Reveal>
+            )}
           </div>
         </div>
       </div>

@@ -184,6 +184,16 @@ export interface TeamMember {
   img: string;
 
   /**
+   * Optional custom list of key practice areas / advisory competencies.
+   */
+  practiceAreas?: string[];
+
+  /**
+   * Optional concluding commitment or client promise statement.
+   */
+  commitment?: string;
+
+  /**
    * Active status. Only "active" members are rendered on the live site.
    */
   status: "active" | "inactive";
