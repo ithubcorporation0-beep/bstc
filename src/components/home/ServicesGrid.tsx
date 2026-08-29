@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getActiveServices } from "@/data";
 import Section from "@/components/ui/Section";
@@ -28,27 +27,12 @@ export function ServicesGrid() {
           >
             <Card
               href={`/services/${service.slug}`}
-              className="h-full flex flex-col justify-between p-4 sm:p-5 hover:border-royal/40 dark:hover:border-royal-light/40 group overflow-hidden"
+              className="h-full flex flex-col justify-between p-6 hover:border-royal/40 dark:hover:border-royal-light/40 group overflow-hidden transition-all duration-300 hover:shadow-soft-lg"
             >
               <div>
-                {/* Service Image Header with Floating Icon Badge */}
-                <div className="relative h-44 w-full rounded-2xl overflow-hidden mb-4.5 bg-slate-100 dark:bg-slate-800 shadow-inner">
-                  {service.banner && (
-                    <Image
-                      src={service.banner}
-                      alt={`${service.title} — Business Solutions Tax Consultants`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover group-hover:scale-108 transition-transform duration-500"
-                    />
-                  )}
-                  {/* Subtle Gradient Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
-                  
-                  {/* Floating Glass Icon Badge */}
-                  <div className="absolute bottom-3 left-3 w-10 h-10 rounded-xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-royal dark:text-royal-light flex items-center justify-center shadow-soft border border-white/40 dark:border-slate-700/50 group-hover:bg-royal group-hover:text-white transition-all duration-300">
-                    <Icon name={service.icon} className="w-5 h-5" />
-                  </div>
+                {/* Service Icon Badge */}
+                <div className="w-12 h-12 rounded-2xl bg-royal/10 dark:bg-royal/20 text-royal dark:text-royal-light flex items-center justify-center mb-5 border border-royal/15 dark:border-royal/30 group-hover:bg-royal group-hover:text-white dark:group-hover:bg-royal-light dark:group-hover:text-slate-950 transition-all duration-300 shadow-soft">
+                  <Icon name={service.icon} className="w-6 h-6" />
                 </div>
 
                 {/* Title */}
@@ -57,13 +41,13 @@ export function ServicesGrid() {
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+                <p className="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-3">
                   {service.desc}
                 </p>
               </div>
 
               {/* Action Link Footer */}
-              <div className="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors">
+              <div className="pt-4 mt-5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors">
                 <span>View Details</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>

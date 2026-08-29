@@ -22,7 +22,6 @@ export const services: Service[] = [
     seoDesc: "Professional income tax return filing for individuals, salaried employees, AOPs, and private companies in Pakistan. Led by Hassan Zeb (Registered ITP).",
     status: "active",
     order: 1,
-    banner: "/images/services/income-tax.jpg",
   },
   {
     slug: "sales-tax",
@@ -38,7 +37,6 @@ export const services: Service[] = [
     seoDesc: "Timely monthly sales tax return preparation, input/output adjustment, and compliance across Pakistan.",
     status: "active",
     order: 2,
-    banner: "/images/services/sales-tax.jpg",
   },
   {
     slug: "bookkeeping",
@@ -54,7 +52,6 @@ export const services: Service[] = [
     seoDesc: "Accurate ledger bookkeeping, payroll management, and transaction reconciliation for small and growing businesses.",
     status: "active",
     order: 3,
-    banner: "/images/services/bookkeeping.jpg",
   },
   {
     slug: "financial-statement",
@@ -70,7 +67,6 @@ export const services: Service[] = [
     seoDesc: "Comprehensive balance sheet, profit & loss, and cash flow statement preparation for bank loans, SECP compliance, and tax filings.",
     status: "active",
     order: 4,
-    banner: "/images/services/financial-statement.jpg",
   },
   {
     slug: "ntn-registration",
@@ -86,7 +82,6 @@ export const services: Service[] = [
     seoDesc: "Get your National Tax Number (NTN) issued through FBR Iris with expert guidance from registered tax practitioners.",
     status: "active",
     order: 5,
-    banner: "/images/services/ntn-registration.jpg",
   },
   {
     slug: "sales-tax-registration",
@@ -102,7 +97,6 @@ export const services: Service[] = [
     seoDesc: "Complete Sales Tax Registration Number (STRN) procurement for commercial importers, manufacturers, and service providers.",
     status: "active",
     order: 6,
-    banner: "/images/services/sales-tax-reg.jpg",
   },
   {
     slug: "secp-registration",
@@ -118,7 +112,6 @@ export const services: Service[] = [
     seoDesc: "Seamless corporate entity incorporation with SECP Pakistan. Name reservation, digital signatures, and certificate issuance.",
     status: "active",
     order: 7,
-    banner: "/images/services/secp-registration.jpg",
   },
   {
     slug: "pra-registration",
@@ -134,7 +127,6 @@ export const services: Service[] = [
     seoDesc: "Complete Punjab Revenue Authority tax enrollment and monthly compliance for service businesses in Punjab.",
     status: "active",
     order: 8,
-    banner: "/images/services/pra-revenue.jpg",
   },
   {
     slug: "kpra-registration",
@@ -150,7 +142,6 @@ export const services: Service[] = [
     seoDesc: "Official Khyber Pakhtunkhwa Revenue Authority tax registration and advisory for hotels, contractors, and service providers.",
     status: "active",
     order: 9,
-    banner: "/images/services/kpra-revenue.jpg",
   },
   {
     slug: "bra-registration",
@@ -166,7 +157,6 @@ export const services: Service[] = [
     seoDesc: "Balochistan Revenue Authority sales tax on services registration, withholding tax guidance, and monthly filing.",
     status: "active",
     order: 10,
-    banner: "/images/services/bra-revenue.jpg",
   },
   {
     slug: "srb-registration",
@@ -182,7 +172,6 @@ export const services: Service[] = [
     seoDesc: "Sindh Revenue Board (SRB) registration, e-filing, and compliance for corporate entities and service providers in Sindh.",
     status: "active",
     order: 11,
-    banner: "/images/services/srb-revenue.jpg",
   },
   {
     slug: "pec-registration",
@@ -198,7 +187,6 @@ export const services: Service[] = [
     seoDesc: "Assistance with PEC constructor/operator licensing, category upgrades, and engineer biometrics verification.",
     status: "active",
     order: 12,
-    banner: "/images/services/pec-registration.jpg",
   },
   {
     slug: "pos-integration",
@@ -214,7 +202,6 @@ export const services: Service[] = [
     seoDesc: "Certified FBR POS software integration, barcode verification, and real-time sales reporting for retail businesses in Pakistan.",
     status: "active",
     order: 13,
-    banner: "/images/services/pos-integration.jpg",
   },
   {
     slug: "dis-integration",
@@ -230,6 +217,5 @@ export const services: Service[] = [
     seoDesc: "Implementation of FBR Digital Invoicing System (DIS) for corporate taxpayers and supply chain enterprises.",
     status: "active",
     order: 14,
-    banner: "/images/services/dis-integration.jpg",
   },
 ];
