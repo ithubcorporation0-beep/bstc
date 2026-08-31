@@ -24,7 +24,7 @@ export const homeContent: HomeContent = {
   about: {
     title: "About Business Solutions Tax Consultants",
     intro:
-      "Led by Hassan Zeb, CEO & Registered Income Tax Practitioner (ITP), and Javed Hussain, Director, BSTC was established with one mission: Tax compliance and corporate registration should never be confusing, slow, or uncertain.",
+      "Led by Javed Hussain, Director, and Hassan Zeb, CEO & Registered Income Tax Practitioner (ITP), BSTC was established with one mission: Tax compliance and corporate registration should never be confusing, slow, or uncertain.",
     desc:
       "For over two decades, we have helped salaried individuals, freelancers, commercial traders, startups, and established enterprises across Pakistan navigate tax compliance, corporate registrations, bookkeeping, and financial reporting with total confidence.\n\nWhether you need seamless annual income tax return filing, provincial sales tax handling, or SECP private limited company incorporation, our dedicated practitioners manage the complexities so you can focus on building your business.",
     img: "/images/about-consultant.jpg",
@@ -102,7 +102,7 @@ export const homeContent: HomeContent = {
       name: "Omar Farooq", // TODO(O13): real client testimonial from client
       comp: "Founder, Apex Logistics", // TODO(O13): real client testimonial from client
       rating: 5,
-      text: "BSTC made our corporate company registration and NTN procurement completely painless. Hassan Zeb, Javed Hussain, and the entire team are exceptionally knowledgeable and responsive.",
+      text: "BSTC made our corporate company registration and NTN procurement completely painless. Javed Hussain, Hassan Zeb, and the entire team are exceptionally knowledgeable and responsive.",
     },
     {
       name: "Ali Raza", // TODO(O13): real client testimonial from client
