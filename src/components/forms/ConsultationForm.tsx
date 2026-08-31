@@ -160,7 +160,7 @@ export function ConsultationForm() {
               Consultation Request Received!
             </h3>
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
-              Thank you, <strong>{formData.firstName}</strong>. Javed Hussain (ITP) and our advisory desk have received your request.
+              Thank you, <strong>{formData.firstName}</strong>. Hassan Zeb (CEO &amp; ITP), Javed Hussain (Director), and our advisory desk have received your request.
             </p>
           </div>
 

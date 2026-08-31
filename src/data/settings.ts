@@ -21,7 +21,7 @@ export const siteSettings: SiteSettings = {
   // Global SEO & Analytics
   seoTitle: "BSTC — Business Solutions Tax Consultants | Tax & Corporate Advisory Pakistan",
   seoDesc:
-    "Leading tax consultancy in Swat & Pakistan. Income tax filing, sales tax, SECP company registration, NTN, and corporate bookkeeping led by Javed Hussain (Owner & Income Tax Practitioner).",
+    "Leading tax consultancy in Swat & Pakistan. Income tax filing, sales tax, SECP company registration, NTN, and corporate bookkeeping led by Hassan Zeb (CEO & Registered ITP) and Javed Hussain (Director).",
   gaId: "G-XXXXXXXXXX",
 
   // Social Channels
