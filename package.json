@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "opennextjs-cloudflare build --skipBuild",
     "build:worker": "opennextjs-cloudflare build",
     "start": "next start",
     "lint": "eslint",
