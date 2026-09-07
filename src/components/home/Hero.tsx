@@ -52,22 +52,22 @@ export function Hero() {
         {/* Single H1 Headline */}
         <Reveal delay={120}>
           <h1
-            className={`font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] ${
+            className={`font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] uppercase ${
               hasBgImage ? "text-white" : "text-ink"
             }`}
           >
-            Professional Tax &amp;{" "}
-            <span className="gradient-text">Business Consultancy</span> in Pakistan
+            Business Solutions{" "}
+            <span className="gradient-text">Tax Consultants</span>
           </h1>
         </Reveal>
 
         {/* Subtitle */}
         <Reveal delay={240}>
           <p
-            className={`max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed ${
+            className={`max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl font-semibold tracking-wide ${
               hasBgImage
-                ? "text-slate-200"
-                : "text-slate-600 dark:text-slate-300"
+                ? "text-slate-100"
+                : "text-royal dark:text-royal-light"
             }`}
           >
             {hero.subtitle}

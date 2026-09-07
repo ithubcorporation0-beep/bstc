@@ -6,9 +6,8 @@ import { HomeContent } from "@/types/content";
  */
 export const homeContent: HomeContent = {
   hero: {
-    title: "Professional Tax & Business Consultancy in Pakistan",
-    subtitle:
-      "Helping businesses, freelancers, and corporations stay 100% compliant, registered, and financially organized.",
+    title: "BUSINESS SOLUTIONS TAX CONSULTANTS",
+    subtitle: "Value Added To Your Business",
     cta: "Book Free Consultation",
     ctaLink: "#contact",
     secondaryCta: "Explore All Services",
