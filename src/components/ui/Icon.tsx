@@ -47,6 +47,13 @@ import {
   RefreshCw,
   Search,
   Compass,
+  Code2,
+  Monitor,
+  Palette,
+  ShoppingCart,
+  ShoppingBag,
+  Megaphone,
+  Laptop,
   LucideProps,
   LucideIcon,
 } from "lucide-react";
@@ -100,6 +107,13 @@ const ICON_MAP: Record<string, LucideIcon> = {
   RefreshCw,
   Search,
   Compass,
+  Code2,
+  Monitor,
+  Palette,
+  ShoppingCart,
+  ShoppingBag,
+  Megaphone,
+  Laptop,
 };
 
 export type IconName = keyof typeof ICON_MAP | string;

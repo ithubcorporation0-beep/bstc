@@ -22,6 +22,7 @@ export const services: Service[] = [
     seoDesc: "Professional income tax return filing for individuals, salaried employees, AOPs, and private companies in Pakistan. Led by Javed Hussain (Director) and Hassan Zeb (CEO & Registered ITP).",
     status: "active",
     order: 1,
+    category: "tax-corporate",
   },
   {
     slug: "sales-tax",
@@ -37,6 +38,7 @@ export const services: Service[] = [
     seoDesc: "Timely monthly sales tax return preparation, input/output adjustment, and compliance across Pakistan.",
     status: "active",
     order: 2,
+    category: "tax-corporate",
   },
   {
     slug: "bookkeeping",
@@ -52,6 +54,7 @@ export const services: Service[] = [
     seoDesc: "Accurate ledger bookkeeping, payroll management, and transaction reconciliation for small and growing businesses.",
     status: "active",
     order: 3,
+    category: "tax-corporate",
   },
   {
     slug: "financial-statement",
@@ -67,6 +70,7 @@ export const services: Service[] = [
     seoDesc: "Comprehensive balance sheet, profit & loss, and cash flow statement preparation for bank loans, SECP compliance, and tax filings.",
     status: "active",
     order: 4,
+    category: "tax-corporate",
   },
   {
     slug: "ntn-registration",
@@ -82,6 +86,7 @@ export const services: Service[] = [
     seoDesc: "Get your National Tax Number (NTN) issued through FBR Iris with expert guidance from registered tax practitioners.",
     status: "active",
     order: 5,
+    category: "tax-corporate",
   },
   {
     slug: "sales-tax-registration",
@@ -97,6 +102,7 @@ export const services: Service[] = [
     seoDesc: "Complete Sales Tax Registration Number (STRN) procurement for commercial importers, manufacturers, and service providers.",
     status: "active",
     order: 6,
+    category: "tax-corporate",
   },
   {
     slug: "secp-registration",
@@ -112,6 +118,7 @@ export const services: Service[] = [
     seoDesc: "Seamless corporate entity incorporation with SECP Pakistan. Name reservation, digital signatures, and certificate issuance.",
     status: "active",
     order: 7,
+    category: "tax-corporate",
   },
   {
     slug: "pra-registration",
@@ -127,6 +134,7 @@ export const services: Service[] = [
     seoDesc: "Complete Punjab Revenue Authority tax enrollment and monthly compliance for service businesses in Punjab.",
     status: "active",
     order: 8,
+    category: "tax-corporate",
   },
   {
     slug: "kpra-registration",
@@ -142,6 +150,7 @@ export const services: Service[] = [
     seoDesc: "Official Khyber Pakhtunkhwa Revenue Authority tax registration and advisory for hotels, contractors, and service providers.",
     status: "active",
     order: 9,
+    category: "tax-corporate",
   },
   {
     slug: "bra-registration",
@@ -157,6 +166,7 @@ export const services: Service[] = [
     seoDesc: "Balochistan Revenue Authority sales tax on services registration, withholding tax guidance, and monthly filing.",
     status: "active",
     order: 10,
+    category: "tax-corporate",
   },
   {
     slug: "srb-registration",
@@ -172,6 +182,7 @@ export const services: Service[] = [
     seoDesc: "Sindh Revenue Board (SRB) registration, e-filing, and compliance for corporate entities and service providers in Sindh.",
     status: "active",
     order: 11,
+    category: "tax-corporate",
   },
   {
     slug: "pec-registration",
@@ -187,6 +198,7 @@ export const services: Service[] = [
     seoDesc: "Assistance with PEC constructor/operator licensing, category upgrades, and engineer biometrics verification.",
     status: "active",
     order: 12,
+    category: "tax-corporate",
   },
   {
     slug: "pos-integration",
@@ -202,6 +214,7 @@ export const services: Service[] = [
     seoDesc: "Certified FBR POS software integration, barcode verification, and real-time sales reporting for retail businesses in Pakistan.",
     status: "active",
     order: 13,
+    category: "tax-corporate",
   },
   {
     slug: "dis-integration",
@@ -217,5 +230,221 @@ export const services: Service[] = [
     seoDesc: "Implementation of FBR Digital Invoicing System (DIS) for corporate taxpayers and supply chain enterprises.",
     status: "active",
     order: 14,
+    category: "tax-corporate",
+  },
+  {
+    slug: "software-solutions",
+    title: "Software Solutions",
+    icon: "Code2",
+    desc: "Bespoke enterprise software, custom CRM/ERP platforms, cloud architectures, and intelligent business automation.",
+    fullDesc:
+      "In today's fast-moving business landscape, generic off-the-shelf software rarely meets every operational demand. Our Software Solutions practice crafts secure, scalable, and performance-oriented software systems engineered specifically around your corporate workflows.\n\nFrom customized ERP and CRM systems to intelligent process automation and cloud-native microservices, we bridge technical innovation with practical business needs. Every software project undergoes rigorous code reviews, automated security audits, modular architecture planning, and seamless integration with your existing accounting, tax, or inventory management platforms.",
+    benefits: [
+      "Custom Enterprise Architecture & Highly Scalable Backend Systems",
+      "Seamless Integration with Financial Ledgers, POS & ERP Systems",
+      "Enterprise-Grade Cloud Infrastructure, Docker & Modern APIs",
+      "End-to-End Agile Development with Continuous CI/CD Support",
+    ],
+    reqDocs: [
+      "Business Requirement Specification (BRS) or Project Scope Document",
+      "Existing System Architecture & Database Schema (if upgrading)",
+      "Target User Roles, Permissions & Access Hierarchy",
+      "Preferred Cloud Hosting & Third-Party Integration Credentials",
+    ],
+    process: [
+      "Discovery & Architecture Design: Comprehensive requirements analysis, user story mapping, and database architecture planning.",
+      "UI/UX Wireframing & API Contracts: Interactive interface prototyping and REST/GraphQL API contract definition.",
+      "Agile Sprint Development: Iterative coding in modular bi-weekly sprints with interactive milestone demos.",
+      "Quality Assurance & Security Benchmarks: Automated regression testing, load testing, and penetration security audits.",
+      "Deployment & Ongoing Maintenance: Zero-downtime cloud deployment with 24/7 telemetry monitoring and SLA support.",
+    ],
+    faqs: [
+      {
+        q: "What technologies and frameworks does your software engineering team use?",
+        a: "We engineer solutions using modern, industry-standard stacks including TypeScript, Node.js, Python, Next.js, React, PostgreSQL, MySQL, Redis, Docker, and enterprise cloud providers like AWS, Cloudflare, and Google Cloud.",
+      },
+      {
+        q: "Can custom software integrate with our existing accounting or FBR tax systems?",
+        a: "Yes. We specialize in building custom API adapters that seamlessly synchronize data with corporate accounting software, POS systems, inventory management engines, and FBR Digital Invoicing (DIS) pipelines.",
+      },
+    ],
+    seoTitle: "Custom Software Solutions & Enterprise Development | BSTC",
+    seoDesc:
+      "Tailored software development, custom ERP systems, cloud-native applications, and workflow automation designed for modern scalable businesses.",
+    status: "active",
+    order: 15,
+    category: "it-digital",
+  },
+  {
+    slug: "website-solutions",
+    title: "Website Solutions",
+    icon: "Monitor",
+    desc: "High-converting, responsive, and ultra-fast corporate websites engineered to strengthen brand authority and drive business growth.",
+    fullDesc:
+      "Your corporate website is your primary digital storefront and the cornerstone of your business credibility. Our Website Solutions team designs and develops blazing-fast, mobile-first, and search-engine-optimized websites and web portals.\n\nWe focus on modern design aesthetics, flawless Core Web Vitals performance, conversion rate optimization, and seamless CMS integration so your team can effortlessly manage content while visitors enjoy an intuitive, premium browsing experience.",
+    benefits: [
+      "Bespoke Mobile-First Responsive Design for All Screen Sizes",
+      "Sub-Second Page Load Speeds & 100% Core Web Vitals Compliance",
+      "Built-in Technical SEO, Schema.org Structured Data & OpenGraph",
+      "Intuitive CMS Integration for Effortless Content Updates",
+    ],
+    reqDocs: [
+      "Brand Assets (High-resolution Logo, official color palette, typography)",
+      "Website Sitemap & Core Page Content Outlines",
+      "Domain Name Access & Preferred Web Hosting Environment",
+      "Reference Websites & Visual Style Preferences",
+    ],
+    process: [
+      "Information Architecture: Structuring site hierarchy, user journeys, and wireframe layouts.",
+      "Visual Design & Prototyping: Creating interactive, high-fidelity UI mockups tailored to your brand.",
+      "Modern Web Development: Clean, semantic HTML, modern Tailwind CSS, and optimized Next.js components.",
+      "Speed & Technical SEO Optimization: Image compression, caching strategies, and search engine readiness.",
+      "Launch & Training: Domain configuration, SSL certificate deployment, and comprehensive CMS handover.",
+    ],
+    faqs: [
+      {
+        q: "Will my website be fully responsive across mobile phones and tablets?",
+        a: "Yes. Every website is built from the ground up with a mobile-first philosophy, ensuring flawless rendering and touch interactions on smartphones, tablets, laptops, and 4K displays.",
+      },
+      {
+        q: "Can our team easily edit text, images, and publish blog articles without coding?",
+        a: "Absolutely. We configure an intuitive, secure Content Management System (CMS) or Markdown content workflow that allows non-technical team members to update content with zero technical hurdles.",
+      },
+    ],
+    seoTitle: "Professional Website Solutions & Modern Web Development | BSTC",
+    seoDesc:
+      "Custom corporate website design, modern web development, responsive UX/UI, and high-performance business web solutions in Pakistan.",
+    status: "active",
+    order: 16,
+    category: "it-digital",
+  },
+  {
+    slug: "digital-marketing",
+    title: "Digital Marketing",
+    icon: "Megaphone",
+    desc: "Data-driven performance marketing, SEO optimization, PPC advertising, and targeted social media growth strategies.",
+    fullDesc:
+      "Generate qualified business leads, elevate brand awareness, and achieve measurable ROI with data-backed digital marketing campaigns. Our performance marketing strategies combine deep audience targeting, search engine optimization (SEO), and high-conversion sales funnels.\n\nFrom Google Search Ads and Meta campaigns to B2B lead generation and retargeting workflows, we turn digital traffic into loyal, paying clients through transparent performance metrics and continuous campaign refinement.",
+    benefits: [
+      "Multi-Channel Campaigns: Google Ads, Meta (Facebook/Instagram), LinkedIn & Display",
+      "Technical & Content-Driven SEO to Dominate High-Intent Search Queries",
+      "End-to-End Conversion Tracking, GA4 Analytics & Custom Live Dashboards",
+      "Optimized Ad Spend Allocation Delivering High Return on Ad Spend (ROAS)",
+    ],
+    reqDocs: [
+      "Target Audience Demographics, Geographic Markets & Buyer Personas",
+      "Access to Existing Advertising Accounts & Social Media Pages",
+      "Monthly Advertising Budget & Customer Acquisition Targets",
+      "Core Value Propositions & Promotional Offers",
+    ],
+    process: [
+      "Market Research & Competitor Audit: Keyword research, audience analysis, and benchmark assessment.",
+      "Tracking & Funnel Setup: Deploying Google Tag Manager, GA4 event tracking, and conversion pixels.",
+      "Creative Production & Ad Copy: Designing high-engagement visuals and compelling direct-response copy.",
+      "Campaign Launch & A/B Testing: Running multi-variant split tests across headlines, creatives, and audiences.",
+      "Ongoing Optimization & Scale: Real-time bid adjustments, negative keyword hygiene, and weekly ROI reports.",
+    ],
+    faqs: [
+      {
+        q: "Which digital advertising channels and platforms do you manage?",
+        a: "We manage end-to-end campaigns across Google Search, Performance Max, Display Network, YouTube, Meta (Facebook & Instagram), LinkedIn B2B Ads, and TikTok.",
+      },
+      {
+        q: "How soon do digital marketing campaigns start generating measurable results?",
+        a: "Paid PPC and social campaigns typically begin driving targeted traffic and qualified inquiries within 48 to 72 hours of launch, while organic SEO builds compounding, sustainable rankings over 3 to 6 months.",
+      },
+    ],
+    seoTitle: "Digital Marketing & Performance Growth Services | BSTC",
+    seoDesc:
+      "Results-driven digital marketing, Google Ads, SEO optimization, and social media marketing to boost leads, conversions, and revenue.",
+    status: "active",
+    order: 17,
+    category: "it-digital",
+  },
+  {
+    slug: "graphic-design",
+    title: "Graphic Design",
+    icon: "Palette",
+    desc: "Compelling brand identities, corporate logos, marketing collateral, and UI/UX visuals that make your business unforgettable.",
+    fullDesc:
+      "First impressions shape corporate reputations. Our creative graphic design practice crafts distinct, cohesive, and impactful visual identities that communicate authority and trust.\n\nWhether establishing a brand-new corporate identity, redesigning existing marketing collaterals, designing company profiles, or crafting digital social media creatives, we produce polished, vector-perfect designs ready for both digital screens and commercial high-resolution print.",
+    benefits: [
+      "Complete Corporate Brand Identity Kits, Logo Guidelines & Typography Standards",
+      "Print-Ready Collateral: Business Stationery, Corporate Profiles & Annual Reports",
+      "High-Impact Digital Graphics for Social Media & Advertising Campaigns",
+      "Full Commercial Ownership & Vector Source Files Provided (AI, EPS, SVG, PDF, PNG)",
+    ],
+    reqDocs: [
+      "Company Name, Tagline & Industry Background Summary",
+      "Visual Style Preferences (Color tones, minimalism, modern vs. classic aesthetic)",
+      "Specific Deliverables Checklist (Logo, business card, letterhead, brochures)",
+      "Inspirational Brand References or Competitor Design Benchmarks",
+    ],
+    process: [
+      "Creative Brief & Moodboard: Defining brand personality, target audience aesthetic, and visual benchmarks.",
+      "Concept Exploration: Crafting multiple unique creative directions and logo sketches.",
+      "Collaborative Feedback & Refinement: Fine-tuning chosen concepts based on your detailed input.",
+      "Collateral Design: Extending the visual language across stationery, corporate decks, and marketing assets.",
+      "Final Asset Delivery: Packaging print-ready vectors and web-optimized raster formats with complete source files.",
+    ],
+    faqs: [
+      {
+        q: "Do we receive full commercial ownership and copyright for the created designs?",
+        a: "Yes. Upon project completion and final sign-off, you receive 100% full commercial copyright and ownership of all design assets and source files.",
+      },
+      {
+        q: "What file formats are provided upon completion?",
+        a: "We deliver fully editable vector source files (Adobe Illustrator .AI, .EPS, .SVG) as well as print-ready high-resolution PDFs and web-optimized transparent PNG and JPEG files.",
+      },
+    ],
+    seoTitle: "Professional Graphic Design & Corporate Branding Services | BSTC",
+    seoDesc:
+      "Creative logo design, corporate brand identity, marketing collaterals, and digital visuals engineered to elevate your brand prestige.",
+    status: "active",
+    order: 18,
+    category: "it-digital",
+  },
+  {
+    slug: "ecommerce-solutions",
+    title: "E-Commerce Solutions",
+    icon: "ShoppingCart",
+    desc: "Turnkey online stores, secure payment gateway integrations, automated inventory management, and conversion-optimized storefronts.",
+    fullDesc:
+      "Expand your commercial reach with modern e-commerce storefronts engineered for high conversion rates, frictionless checkouts, and effortless catalog administration.\n\nWe build custom online stores, integrate local and international payment gateways, connect automated multi-location inventory management, and implement FBR POS / DIS tax-compliant invoicing so you can sell products locally and globally without operational friction.",
+    benefits: [
+      "High-Converting Checkout Flow & Streamlined Cart Experience",
+      "Seamless Payment Gateway Integration (Cards, Bank Transfer, JazzCash, EasyPaisa, Stripe)",
+      "Automated Tax Calculation & FBR POS / Digital Invoicing Integration",
+      "Mobile-First Design with Fast Product Search & Smart Faceted Filtering",
+    ],
+    reqDocs: [
+      "Product Catalog Outline (Categories, variants, pricing, SKU structures)",
+      "Payment Gateway Accounts & Merchant API Credentials",
+      "Shipping & Courier Logistics Partners (TCS, Leopards, Trax, DHL, etc.)",
+      "Return Policy, Terms of Service & Store Policies",
+    ],
+    process: [
+      "Store Architecture & Workflow Design: Structuring product taxonomy, payment methods, and shipping rules.",
+      "Storefront UI/UX Customization: Designing intuitive product discovery and seamless mobile checkout.",
+      "Platform Development & Integration: Setting up catalog, secure payment gateways, and shipping APIs.",
+      "Tax & Invoicing Sync: Connecting automated tax calculations and digital receipt systems.",
+      "Testing & Go-Live: Conducting test transactions, verifying security protocols, and launching the store.",
+    ],
+    faqs: [
+      {
+        q: "Which e-commerce platforms and architectures do you develop on?",
+        a: "We develop on Shopify, WooCommerce, and custom Next.js headless e-commerce architectures, selecting the ideal platform based on your product volume and customization requirements.",
+      },
+      {
+        q: "Can you integrate local Pakistani payment gateways and courier tracking APIs?",
+        a: "Yes. We provide complete integration for Pakistani payment gateways (PayFast, Alfa, JazzCash, EasyPaisa) and courier APIs (TCS, Leopards, Trax) for real-time order tracking and automated dispatch.",
+      },
+    ],
+    seoTitle: "E-Commerce Solutions & Online Store Development | BSTC",
+    seoDesc:
+      "Turnkey e-commerce website development, secure payment gateway integrations, automated inventory management, and high-converting online stores.",
+    status: "active",
+    order: 19,
+    category: "it-digital",
   },
 ];

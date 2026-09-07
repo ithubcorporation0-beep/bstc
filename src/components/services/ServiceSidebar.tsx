@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Phone, MessageSquare, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, MessageSquare, ShieldCheck, CheckCircle2, Sparkles } from "lucide-react";
 import { siteSettings } from "@/data/settings";
 import { Service } from "@/types/content";
+import { getServiceBySlug } from "@/data";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import Icon from "@/components/ui/Icon";
@@ -19,22 +20,43 @@ export function ServiceSidebar({
   const cleanPhone = siteSettings.phone.replace(/[^0-9+]/g, "");
   const cleanWa = siteSettings.wa.replace(/[^0-9]/g, "");
 
+  const currentService = getServiceBySlug(currentSlug);
+  const isIT = currentService?.category === "it-digital";
+
+  // Prioritize related services from the same category
+  const sortedRelated = [...relatedServices].sort((a, b) => {
+    const aSame = a.category === currentService?.category ? -1 : 1;
+    const bSame = b.category === currentService?.category ? -1 : 1;
+    return aSame - bSame;
+  });
+
   return (
     <aside className="space-y-8 sticky top-24">
       {/* 1. "Need this service?" CTA Card */}
       <Card className="p-7 sm:p-8 bg-gradient-to-br from-royal-dark to-royal text-white border-0 shadow-soft-lg space-y-6">
         <div className="space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold backdrop-blur-md">
-            <ShieldCheck className="w-3.5 h-3.5 text-lime-bright" />
-            <span>Certified ITP Advisory</span>
+            {isIT ? (
+              <>
+                <Sparkles className="w-3.5 h-3.5 text-lime-bright" />
+                <span>Modern Technology Advisory</span>
+              </>
+            ) : (
+              <>
+                <ShieldCheck className="w-3.5 h-3.5 text-lime-bright" />
+                <span>Certified ITP Advisory</span>
+              </>
+            )}
           </div>
 
           <h3 className="font-display font-extrabold text-2xl text-white leading-tight">
-            Need Expert Assistance?
+            {isIT ? "Ready to Build Your Solution?" : "Need Expert Assistance?"}
           </h3>
 
           <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
-            Avoid penalties, notices, and procedural delays. Our certified tax practitioners handle your filing with 100% legal compliance.
+            {isIT
+              ? "Accelerate your business with bespoke software, high-performing websites, and high-ROI digital campaigns tailored to your goals."
+              : "Avoid penalties, notices, and procedural delays. Our certified tax practitioners handle your filing with 100% legal compliance."}
           </p>
         </div>
 
@@ -46,7 +68,7 @@ export function ServiceSidebar({
             className="w-full justify-center text-slate-950 font-bold"
             icon={<ArrowRight className="w-4 h-4" />}
           >
-            Book Free Consultation
+            {isIT ? "Request Project Consultation" : "Book Free Consultation"}
           </Button>
 
           <a
@@ -63,24 +85,24 @@ export function ServiceSidebar({
         <div className="pt-4 border-t border-white/15 flex items-center justify-between text-[11px] text-blue-200">
           <span className="flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5 text-lime-bright" />
-            <span>Fast Processing</span>
+            <span>Fast Turnaround</span>
           </span>
           <span className="flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5 text-lime-bright" />
-            <span>Confidential</span>
+            <span>Dedicated Support</span>
           </span>
         </div>
       </Card>
 
       {/* 2. Related Services List */}
-      {relatedServices.length > 0 && (
+      {sortedRelated.length > 0 && (
         <Card className="p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
           <h3 className="font-display font-bold text-base text-ink border-b border-slate-100 dark:border-slate-800 pb-3">
-            Related Advisory Services
+            {isIT ? "Related Technology Services" : "Related Advisory Services"}
           </h3>
 
           <ul className="space-y-2">
-            {relatedServices.slice(0, 6).map((service) => (
+            {sortedRelated.slice(0, 6).map((service) => (
               <li key={service.slug}>
                 <Link
                   href={`/services/${service.slug}`}
