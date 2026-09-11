@@ -6,12 +6,12 @@ import { TeamMember } from "@/types/content";
  */
 export const team: TeamMember[] = [
   {
-    slug: "javed-hussain",
-    name: "Javed Hussain",
+    slug: "javid-hussain",
+    name: "Javid Hussain",
     desig: "Director",
     dept: "Executive Board & Strategic Tax Advisory",
     shortDesc: "Director at Business Solutions Tax Consultants (BSTC), providing executive leadership, strategic oversight, and corporate advisory services.",
-    bio: "Javed Hussain is the Director at Business Solutions Tax Consultants (BSTC), providing executive leadership, strategic oversight, and professional tax consultancy services.\n\nHe specializes in income tax, sales tax, corporate tax compliance, assessments, audits, and departmental proceedings. His practice includes strategic guidance, tax planning, return filing, reconciliation, notices, appeals, and representation before tax authorities.\n\nHe assists individuals, traders, businesses, and corporate clients in managing complex taxation matters. With a practical and solution-oriented approach, he focuses on legal compliance, accurate documentation, and protection of taxpayers’ legitimate rights.\n\nThrough Business Solutions Tax Consultants, he is committed to delivering reliable, professional, and legally sound tax solutions.",
+    bio: "Javid Hussain is the Director at Business Solutions Tax Consultants (BSTC), providing executive leadership, strategic oversight, and professional tax consultancy services.\n\nHe specializes in income tax, sales tax, corporate tax compliance, assessments, audits, and departmental proceedings. His practice includes strategic guidance, tax planning, return filing, reconciliation, notices, appeals, and representation before tax authorities.\n\nHe assists individuals, traders, businesses, and corporate clients in managing complex taxation matters. With a practical and solution-oriented approach, he focuses on legal compliance, accurate documentation, and protection of taxpayers’ legitimate rights.\n\nThrough Business Solutions Tax Consultants, he is committed to delivering reliable, professional, and legally sound tax solutions.",
     practiceAreas: [
       "Income Tax & Sales Tax Consultancy",
       "Tax Planning, Compliance & Return Filing",
@@ -26,7 +26,7 @@ export const team: TeamMember[] = [
     phone: "+92 313 9760000",
     wa: "923139760000",
     li: "https://linkedin.com",
-    img: "/images/team/javed-hussain.svg",
+    img: "/images/team/javid-hussain.svg",
     status: "active",
     order: 1,
   },
@@ -50,7 +50,7 @@ export const team: TeamMember[] = [
     phone: "+92 333 9860439",
     wa: "923339860439",
     li: "https://linkedin.com",
-    img: "/images/team/hassan-zeb.svg",
+    img: "/images/team/hassan-zeb.jpg",
     status: "active",
     order: 2,
   },

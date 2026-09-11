@@ -17,7 +17,13 @@ export function getServiceBySlug(slug: string): Service | undefined {
  * Retrieves a single team member by their URL slug.
  */
 export function getTeamMemberBySlug(slug: string): TeamMember | undefined {
-  return team.find((t) => t.slug.toLowerCase() === slug.toLowerCase());
+  const s = slug.toLowerCase();
+  return team.find(
+    (t) =>
+      t.slug.toLowerCase() === s ||
+      (t.slug.toLowerCase() === "javid-hussain" && s === "javed-hussain") ||
+      (t.slug.toLowerCase() === "javed-hussain" && s === "javid-hussain")
+  );
 }
 
 /**

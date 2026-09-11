@@ -38,9 +38,14 @@ interface PageProps {
  * Pre-render all consultant profiles statically at build time.
  */
 export async function generateStaticParams() {
-  return team.map((member) => ({
-    slug: member.slug,
-  }));
+  const paths: { slug: string }[] = [];
+  team.forEach((member) => {
+    paths.push({ slug: member.slug });
+    if (member.slug === "javid-hussain") {
+      paths.push({ slug: "javed-hussain" });
+    }
+  });
+  return paths;
 }
 
 /**
