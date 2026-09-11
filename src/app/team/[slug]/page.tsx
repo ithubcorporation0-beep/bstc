@@ -142,6 +142,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                     height={400}
                     priority
                     className="w-full h-full object-cover"
+                    unoptimized
                   />
                   {(member.desig.includes("ITP") || member.name.includes("ITP")) && (
                     <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-royal text-white text-xs font-bold shadow-md flex items-center gap-1">

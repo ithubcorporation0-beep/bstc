@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   ...(isCloudflare ? { output: "standalone" } : {}),
   reactStrictMode: true,
   images: {
+    unoptimized: isCloudflare,
     formats: ["image/avif", "image/webp"],
   },
 };

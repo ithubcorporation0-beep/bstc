@@ -32,6 +32,7 @@ export function TeamGrid() {
                     width={400}
                     height={400}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
                   />
                   {(member.desig.includes("ITP") || member.name.includes("ITP")) && (
                     <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-royal text-white text-[10px] font-bold shadow-md flex items-center gap-1">
