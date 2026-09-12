@@ -336,8 +336,19 @@ export interface HomeContent {
  * Renders in:
  * - Root `<Navbar>` and `<Footer>`
  * - Floating WhatsApp / Phone contact widgets
- * - Global metadata, OpenGraph tags, and JSON-LD schema generators
+/**
+ * Branch or office location definition.
  */
+export interface OfficeLocation {
+  city: string;
+  name: string;
+  lead?: string;
+  address: string;
+  phone: string;
+  wa?: string;
+  mapsLink?: string;
+}
+
 export interface SiteSettings {
   /** Short brand name (e.g. "BSTC"). */
   siteName: string;
@@ -368,6 +379,9 @@ export interface SiteSettings {
 
   /** Google Maps link for directions. */
   mapsLink: string;
+
+  /** Multiple office branches across Pakistan. */
+  offices?: OfficeLocation[];
 
   /** Global fallback SEO title tag. */
   seoTitle: string;

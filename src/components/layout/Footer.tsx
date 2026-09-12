@@ -181,36 +181,77 @@ export function Footer() {
           {/* Column 4: Contact & Office */}
           <div>
             <h3 className="font-display font-bold text-base text-ink mb-4">
-              Office &amp; Inquiries
+              Offices &amp; Inquiries
             </h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-royal shrink-0 mt-1" />
-                <span>{siteSettings.address}</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-royal shrink-0" />
-                <a
-                  href={`tel:${siteSettings.phone.replace(/[^0-9+]/g, "")}`}
-                  className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium focus-visible:outline-none focus-visible:underline"
-                >
-                  {siteSettings.phone}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-royal shrink-0" />
-                <a
-                  href={`mailto:${siteSettings.email}`}
-                  className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
-                >
-                  {siteSettings.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-4 h-4 text-royal shrink-0" />
-                <span>{siteSettings.hours}</span>
-              </li>
-            </ul>
+            <div className="space-y-3 text-xs">
+              {siteSettings.offices && siteSettings.offices.length > 0 ? (
+                siteSettings.offices.map((off) => (
+                  <div
+                    key={off.city}
+                    className="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm"
+                  >
+                    <div className="flex items-center justify-between gap-1 mb-1">
+                      <span className="font-bold text-ink text-xs flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-royal shrink-0" />
+                        {off.city} Office
+                      </span>
+                      <span className="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded-full bg-royal/10 text-royal dark:bg-royal/20 dark:text-royal-light">
+                        {off.name.includes("Main") ? "Main" : "Branch"}
+                      </span>
+                    </div>
+                    <p className="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed">
+                      {off.address}
+                    </p>
+                    <div className="mt-2 pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px]">
+                      <a
+                        href={`tel:${off.phone.replace(/[^0-9+]/g, "")}`}
+                        className="font-bold text-ink hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1"
+                      >
+                        <Phone className="w-3 h-3 text-royal" />
+                        {off.phone}
+                      </a>
+                      {off.lead && (
+                        <span className="text-[10px] text-lime-700 dark:text-lime-400 font-medium truncate max-w-[120px]">
+                          {off.lead.split(" (")[0]}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-royal shrink-0 mt-1" />
+                    <span>{siteSettings.address}</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Phone className="w-4 h-4 text-royal shrink-0" />
+                    <a
+                      href={`tel:${siteSettings.phone.replace(/[^0-9+]/g, "")}`}
+                      className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium focus-visible:outline-none focus-visible:underline"
+                    >
+                      {siteSettings.phone}
+                    </a>
+                  </li>
+                </ul>
+              )}
+
+              <div className="pt-1 space-y-1.5 text-xs text-slate-500 dark:text-slate-400">
+                <div className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5 text-royal shrink-0" />
+                  <a
+                    href={`mailto:${siteSettings.email}`}
+                    className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium truncate"
+                  >
+                    {siteSettings.email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-3.5 h-3.5 text-royal shrink-0" />
+                  <span>{siteSettings.hours}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -10,18 +10,40 @@ export const siteSettings: SiteSettings = {
   logo: "/logo.svg",
   favicon: "/favicon.ico",
 
-  // Contact Information
+  // Contact Information (Main Office)
   email: "bs.taxconsultants@gmail.com",
-  phone: "+92 333 9860439",
-  wa: "923339860439",
+  phone: "+92 313 9760000",
+  wa: "923139760000",
   hours: "Mon - Sat: 9:00 AM - 6:00 PM",
-  address: "Office No. 03, Shehzad Plaza, Saidu Road, Makan Bagh, Mingora, District Swat",
-  mapsLink: "https://maps.google.com/?q=Shehzad+Plaza+Saidu+Road+Makan+Bagh+Mingora+Swat",
+  address: "Office No: 10-11, 2nd Floor, Al-Noor Plaza Opposite Mardan Mega Mart, Mardan",
+  mapsLink: "https://maps.google.com/?q=Al-Noor+Plaza+Opposite+Mardan+Mega+Mart+Mardan",
+
+  // Office Locations Across Pakistan
+  offices: [
+    {
+      city: "Mardan",
+      name: "Main Office (Mardan)",
+      lead: "Javed Hussain (Director)",
+      address: "Office No: 10-11, 2nd Floor, Al-Noor Plaza Opposite Mardan Mega Mart, Mardan",
+      phone: "+92 313 9760000",
+      wa: "923139760000",
+      mapsLink: "https://maps.google.com/?q=Al-Noor+Plaza+Opposite+Mardan+Mega+Mart+Mardan",
+    },
+    {
+      city: "Swat",
+      name: "Branch Office (Swat)",
+      lead: "Hassan Zeb (CEO & Registered ITP)",
+      address: "Office No. 03, Shehzad Plaza, Saidu Road, Makan Bagh, Mingora, District Swat",
+      phone: "+92 333 9860439",
+      wa: "923339860439",
+      mapsLink: "https://maps.google.com/?q=Shehzad+Plaza+Saidu+Road+Makan+Bagh+Mingora+Swat",
+    },
+  ],
 
   // Global SEO & Analytics
   seoTitle: "BSTC — Business Solutions Tax Consultants | Tax, Corporate & IT Solutions Pakistan",
   seoDesc:
-    "Leading tax, corporate, and IT consultancy in Pakistan. Income tax filing, sales tax, SECP company registration, NTN, corporate bookkeeping, custom software, modern websites, and digital marketing led by Javid Hussain (Director) and Hassan Zeb (CEO & Registered ITP).",
+    "Leading tax, corporate, and IT consultancy in Pakistan. Income tax filing, sales tax, SECP company registration, NTN, corporate bookkeeping, custom software, modern websites, and digital marketing led by Javed Hussain (Director) and Hassan Zeb (CEO & Registered ITP).",
   gaId: "G-XXXXXXXXXX",
 
   // Social Channels
