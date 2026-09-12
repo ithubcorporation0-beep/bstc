@@ -84,8 +84,8 @@ export const homeContent: HomeContent = {
       a: "Standard SECP company registration takes approximately 3 to 5 business days once all subscriber CNICs, proposed business names, and documentation are submitted through the eServices portal.",
     },
     {
-      q: "Do I need to visit your office physically for tax filing?",
-      a: "Physical visits and in-person consultations are readily available at both our Main Office in Mardan and Branch Office in Swat. However, a physical visit is not mandatory—clients across Pakistan and abroad can complete all consultations, document submissions, and filings 100% digitally via our secure channels and WhatsApp.",
+      q: "Can I visit your office physically for tax filing and consultations?",
+      a: "Yes, physical visits and in-person consultations are readily available at both our Main Office in Mardan and Branch Office in Swat. Clients across Pakistan and abroad can also complete consultations, document submissions, and filings digitally via our secure channels and WhatsApp.",
     },
     {
       q: "What is Active Taxpayer List (ATL) status and why does it matter?",
