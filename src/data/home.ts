@@ -23,10 +23,10 @@ export const homeContent: HomeContent = {
   about: {
     title: "About Business Solutions Tax Consultants",
     intro:
-      "Led by Javid Hussain, Director, and Hassan Zeb, CEO & Registered Income Tax Practitioner (ITP), Business Solutions Tax Consultants (BSTC) is a premier full-service advisory firm delivering certified taxation compliance, corporate legal registrations, and cutting-edge IT & digital solutions across Pakistan.",
+      "BSTC is a full-service advisory firm providing professional tax consultancy, corporate registration, business solutions, and innovative IT & digital services across Pakistan. Led by experienced professionals, we help businesses simplify compliance, improve efficiency, and grow with confidence.",
     desc:
       "For over two decades, BSTC has helped salaried individuals, freelancers, commercial traders, startups, and established enterprises navigate tax compliance, SECP company registrations, bookkeeping, and financial reporting with total confidence.\n\nTo accelerate your business in today's digital economy, we also provide full-suite IT & Digital Services — including custom software development, modern high-converting websites, digital marketing & SEO, brand identity design, and scalable e-commerce solutions. From legal incorporation to digital market leadership, BSTC is your all-in-one business growth partner.",
-    img: "/images/about-consultant.jpg",
+    img: "/images/bstc-logo-badge.svg",
     cards: [
       {
         title: "Registered ITP Leadership",

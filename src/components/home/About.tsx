@@ -59,39 +59,41 @@ export function About() {
             </Reveal>
           </div>
 
-          {/* Right Column: Next.js Optimized Image (5 cols) */}
-          <div className="lg:col-span-5">
-            <Reveal delay={200} direction="left">
-              <div className="relative rounded-3xl overflow-hidden shadow-soft-xl border-2 border-slate-200 dark:border-slate-800 group bg-slate-950">
-                <Image
-                  src={about.img || "/images/about-consultant.jpg"}
-                  alt="About Business Solutions Tax Consultants (BSTC) — Professional Tax Advisory Pakistan"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  priority={false}
-                />
-                
-                {/* Gradient vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+          {/* Right Column: Official BSTC Logo Showcase (5 cols) */}
+          <div className="lg:col-span-5 flex justify-center">
+            <Reveal delay={200} direction="left" className="w-full">
+              <div className="relative rounded-3xl overflow-hidden shadow-soft-xl border-2 border-slate-200 dark:border-slate-800 group bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-8 sm:p-10 flex flex-col items-center justify-center text-center">
+                {/* Ambient Radial Glows */}
+                <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-royal/25 dark:bg-royal/35 blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full bg-lime/20 dark:bg-lime/15 blur-3xl pointer-events-none" />
 
-                {/* Official BSTC Emblem Floating Badge */}
-                <div className="absolute bottom-4 left-4 right-4 sm:right-auto p-3 sm:p-3.5 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-soft-lg flex items-center gap-3 animate-in fade-in duration-300">
-                  <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm border border-slate-700">
-                    <Image
-                      src="/images/bstc-logo-badge.svg"
-                      alt="Official BSTC Logo Badge"
-                      fill
-                      className="object-contain"
-                    />
+                {/* Subtle grid pattern background */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-slate-950/80 pointer-events-none" />
+
+                {/* Large Authentic BSTC Logo Emblem */}
+                <div className="relative w-52 h-52 sm:w-64 sm:h-64 my-2 group-hover:scale-105 transition-transform duration-500 shrink-0">
+                  <Image
+                    src="/images/bstc-logo-badge.svg"
+                    alt="Official Business Solutions Tax Consultants (BSTC) Logo Emblem"
+                    fill
+                    className="object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.6)]"
+                    priority
+                  />
+                </div>
+
+                {/* Firm Details Under Emblem */}
+                <div className="relative z-10 mt-5 space-y-2">
+                  <div className="font-display font-black text-xl sm:text-2xl text-white tracking-tight">
+                    Business Solutions
                   </div>
-                  <div>
-                    <div className="font-display font-extrabold text-xs sm:text-sm text-ink leading-tight">
-                      Javid Hussain (Director)
-                    </div>
-                    <div className="text-[11px] font-bold text-lime-700 dark:text-lime-400 mt-0.5">
-                      Director &amp; Tax Advisory
-                    </div>
+                  <div className="text-xs sm:text-sm font-bold text-lime-400 tracking-widest uppercase">
+                    Tax Consultants &amp; IT Services
+                  </div>
+                  <div className="pt-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[11px] font-semibold text-slate-300">
+                      <ShieldCheck className="w-3.5 h-3.5 text-lime-400" />
+                      <span>Registered ITP &amp; Corporate Advisory • Est. 2004</span>
+                    </span>
                   </div>
                 </div>
               </div>
