@@ -85,7 +85,7 @@ export const homeContent: HomeContent = {
     },
     {
       q: "Do I need to visit your office physically for tax filing?",
-      a: "No physical visit is mandatory. All consultations, document transmissions, and approvals can be completed digitally through our secure communication and WhatsApp channels.",
+      a: "Physical visits and in-person consultations are readily available at both our Main Office in Mardan and Branch Office in Swat. However, a physical visit is not mandatory—clients across Pakistan and abroad can complete all consultations, document submissions, and filings 100% digitally via our secure channels and WhatsApp.",
     },
     {
       q: "What is Active Taxpayer List (ATL) status and why does it matter?",
@@ -109,7 +109,7 @@ export const homeContent: HomeContent = {
       name: "Omar Farooq", // TODO(O13): real client testimonial from client
       comp: "Founder, Apex Logistics", // TODO(O13): real client testimonial from client
       rating: 5,
-      text: "BSTC made our corporate company registration and NTN procurement completely painless. Javid Hussain, Hassan Zeb, and the entire team are exceptionally knowledgeable and responsive.",
+      text: "BSTC made our corporate company registration and NTN procurement completely painless. Javed Hussain, Hassan Zeb, and the entire team are exceptionally knowledgeable and responsive.",
     },
     {
       name: "Ali Raza", // TODO(O13): real client testimonial from client
