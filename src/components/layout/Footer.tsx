@@ -199,19 +199,19 @@ export function Footer() {
                         {off.name.includes("Main") ? "Main" : "Branch"}
                       </span>
                     </div>
-                    <p className="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 text-[11px] leading-relaxed break-words">
                       {off.address}
                     </p>
-                    <div className="mt-2 pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px]">
+                    <div className="mt-2 pt-1.5 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-1.5 text-[11px]">
                       <a
                         href={`tel:${off.phone.replace(/[^0-9+]/g, "")}`}
-                        className="font-bold text-ink hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1"
+                        className="font-bold text-ink hover:text-royal dark:hover:text-royal-light transition-colors inline-flex items-center gap-1 py-0.5"
                       >
                         <Phone className="w-3 h-3 text-royal" />
-                        {off.phone}
+                        <span>{off.phone}</span>
                       </a>
                       {off.lead && (
-                        <span className="text-[10px] text-lime-700 dark:text-lime-400 font-medium truncate max-w-[120px]">
+                        <span className="text-[10px] text-lime-700 dark:text-lime-400 font-semibold truncate max-w-[150px]">
                           {off.lead.split(" (")[0]}
                         </span>
                       )}
@@ -241,7 +241,7 @@ export function Footer() {
                   <Mail className="w-3.5 h-3.5 text-royal shrink-0" />
                   <a
                     href={`mailto:${siteSettings.email}`}
-                    className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium truncate"
+                    className="hover:text-royal dark:hover:text-royal-light transition-colors font-medium break-all"
                   >
                     {siteSettings.email}
                   </a>

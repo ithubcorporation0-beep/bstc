@@ -52,7 +52,7 @@ export function Hero() {
         {/* Single H1 Headline */}
         <Reveal delay={120}>
           <h1
-            className={`font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] uppercase ${
+            className={`font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] sm:leading-[1.1] uppercase break-words ${
               hasBgImage ? "text-white" : "text-ink"
             }`}
           >
@@ -64,7 +64,7 @@ export function Hero() {
         {/* Subtitle */}
         <Reveal delay={240}>
           <p
-            className={`max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl font-semibold tracking-wide ${
+            className={`max-w-2xl mx-auto text-base sm:text-xl md:text-2xl font-semibold tracking-wide leading-relaxed ${
               hasBgImage
                 ? "text-slate-100"
                 : "text-royal dark:text-royal-light"
@@ -76,7 +76,7 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <Reveal delay={360}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
             <Button
               href={hero.ctaLink || "#contact"}
               variant="primary"

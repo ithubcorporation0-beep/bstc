@@ -22,8 +22,8 @@ export function TeamGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {team.map((member, index) => (
           <Reveal key={member.slug} delay={index * 150} className="h-full">
-            <Card className="h-full flex flex-col justify-between p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-royal/40 dark:hover:border-royal-light/40">
-              <div className="space-y-5">
+            <Card className="h-full flex flex-col justify-between p-5 sm:p-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group hover:border-royal/40 dark:hover:border-royal-light/40">
+              <div className="space-y-4 sm:space-y-5">
                 {/* Consultant Portrait */}
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 shadow-inner">
                   <Image
@@ -47,7 +47,7 @@ export function TeamGrid() {
                   <div className="text-xs font-bold text-lime-700 dark:text-lime-400 uppercase tracking-wider">
                     {member.dept}
                   </div>
-                  <h3 className="font-display font-bold text-xl text-ink group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
+                  <h3 className="font-display font-bold text-lg sm:text-xl text-ink group-hover:text-royal dark:group-hover:text-royal-light transition-colors">
                     {member.name}
                   </h3>
                   <p className="text-xs font-semibold text-royal dark:text-royal-light">
@@ -60,10 +60,10 @@ export function TeamGrid() {
               </div>
 
               {/* Card Footer: View Profile Link */}
-              <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+              <div className="pt-5 sm:pt-6 mt-5 sm:mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
                 <Link
                   href={`/team/${member.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors focus-visible:outline-none focus-visible:underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-royal dark:text-royal-light group-hover:text-royal-dark dark:group-hover:text-white transition-colors focus-visible:outline-none focus-visible:underline py-1"
                 >
                   <span>View Profile</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -75,7 +75,7 @@ export function TeamGrid() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Chat with ${member.name} on WhatsApp`}
-                    className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+                    className="p-2 min-h-[36px] min-w-[36px] flex items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-400 hover:text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
                   >
                     <MessageSquare className="w-4 h-4" />
                   </a>

@@ -9,23 +9,21 @@ export function StatsBand() {
   return (
     <section className="relative z-20 -mt-8 sm:-mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-soft-lg p-6 sm:p-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800/80">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {stats.map((stat, index) => (
             <Reveal
               key={stat.label}
               delay={index * 120}
-              className={`flex flex-col items-center text-center ${
-                index > 0 ? "pt-6 sm:pt-0" : ""
-              }`}
+              className="flex flex-col items-center text-center p-2"
             >
-              <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-royal dark:text-royal-light tracking-tight">
+              <div className="font-display text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-extrabold text-royal dark:text-royal-light tracking-tight">
                 <CountUp
                   value={stat.value}
                   suffix={stat.suffix}
                   duration={1800}
                 />
               </div>
-              <p className="mt-2 text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">
+              <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">
                 {stat.label}
               </p>
             </Reveal>
