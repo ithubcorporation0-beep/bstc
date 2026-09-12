@@ -56,7 +56,9 @@ function YoutubeIcon({ className = "" }: { className?: string }) {
 }
 
 export function Footer() {
-  const activeServices = getActiveServices().slice(0, 5);
+  const allServices = getActiveServices();
+  const taxServices = allServices.filter((s) => s.category !== "it-digital").slice(0, 5);
+  const itServices = allServices.filter((s) => s.category === "it-digital").slice(0, 5);
 
   const quickLinks = [
     { label: "Home", href: "/" },
@@ -99,7 +101,7 @@ export function Footer() {
                   {siteSettings.siteName}
                 </span>
                 <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase mt-0.5">
-                  Tax Consultants
+                  Tax, Corporate &amp; IT Solutions
                 </span>
               </div>
             </Link>
@@ -136,13 +138,13 @@ export function Footer() {
             )}
           </div>
 
-          {/* Column 2: Key Services */}
+          {/* Column 2: Tax & Corporate Advisory */}
           <div>
             <h3 className="font-display font-bold text-base text-ink mb-4">
-              Core Services
+              Tax &amp; Corporate Advisory
             </h3>
             <ul className="space-y-2.5 text-sm">
-              {activeServices.map((service) => (
+              {taxServices.map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
@@ -156,20 +158,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Quick Links */}
+          {/* Column 3: IT & Digital Solutions */}
           <div>
             <h3 className="font-display font-bold text-base text-ink mb-4">
-              Quick Links
+              IT &amp; Digital Solutions
             </h3>
             <ul className="space-y-2.5 text-sm">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
+              {itServices.map((service) => (
+                <li key={service.slug}>
                   <Link
-                    href={link.href}
+                    href={`/services/${service.slug}`}
                     className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded p-0.5"
                   >
-                    <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-royal group-hover:translate-x-0.5 transition-all" />
-                    <span>{link.label}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-lime-600 dark:text-lime-400 group-hover:text-royal group-hover:translate-x-0.5 transition-all" />
+                    <span>{service.title}</span>
                   </Link>
                 </li>
               ))}
@@ -217,7 +219,25 @@ export function Footer() {
       <div className="border-t border-slate-200/80 dark:border-slate-800/80 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>{siteSettings.copyright}</p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <Link
+              href="/"
+              className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
+            >
+              Home
+            </Link>
+            <Link
+              href="/#services"
+              className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
+            >
+              Services
+            </Link>
+            <Link
+              href="/#about"
+              className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"
+            >
+              About
+            </Link>
             <Link
               href="/privacy"
               className="hover:text-royal dark:hover:text-royal-light transition-colors focus-visible:outline-none focus-visible:underline"

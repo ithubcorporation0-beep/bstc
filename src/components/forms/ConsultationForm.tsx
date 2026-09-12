@@ -32,6 +32,8 @@ const INITIAL_FORM_STATE: ConsultationFormData = {
 
 export function ConsultationForm() {
   const activeServices = getActiveServices();
+  const taxServices = activeServices.filter((s) => s.category !== "it-digital");
+  const itServices = activeServices.filter((s) => s.category === "it-digital");
   const cleanWa = siteSettings.wa.replace(/[^0-9]/g, "");
 
   const [formData, setFormData] = useState<ConsultationFormData>(INITIAL_FORM_STATE);
@@ -400,12 +402,21 @@ export function ConsultationForm() {
               }`}
             >
               <option value="">Select a service...</option>
-              {activeServices.map((service) => (
-                <option key={service.slug} value={service.slug}>
-                  {service.title}
-                </option>
-              ))}
-              <option value="other">Other Tax / Corporate Advisory</option>
+              <optgroup label="Taxation &amp; Corporate Advisory">
+                {taxServices.map((service) => (
+                  <option key={service.slug} value={service.slug}>
+                    {service.title}
+                  </option>
+                ))}
+              </optgroup>
+              <optgroup label="IT &amp; Digital Solutions">
+                {itServices.map((service) => (
+                  <option key={service.slug} value={service.slug}>
+                    {service.title}
+                  </option>
+                ))}
+              </optgroup>
+              <option value="other">Other Tax, Corporate, or IT Inquiry</option>
             </select>
             {errors.service && (
               <p id="service-error" className="text-xs text-red-500 mt-1 font-medium">

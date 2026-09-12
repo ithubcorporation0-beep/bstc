@@ -19,9 +19,9 @@ export const siteSettings: SiteSettings = {
   mapsLink: "https://maps.google.com/?q=Shehzad+Plaza+Saidu+Road+Makan+Bagh+Mingora+Swat",
 
   // Global SEO & Analytics
-  seoTitle: "BSTC — Business Solutions Tax Consultants | Tax & Corporate Advisory Pakistan",
+  seoTitle: "BSTC — Business Solutions Tax Consultants | Tax, Corporate & IT Solutions Pakistan",
   seoDesc:
-    "Leading tax consultancy in Swat & Pakistan. Income tax filing, sales tax, SECP company registration, NTN, and corporate bookkeeping led by Javid Hussain (Director) and Hassan Zeb (CEO & Registered ITP).",
+    "Leading tax, corporate, and IT consultancy in Pakistan. Income tax filing, sales tax, SECP company registration, NTN, corporate bookkeeping, custom software, modern websites, and digital marketing led by Javid Hussain (Director) and Hassan Zeb (CEO & Registered ITP).",
   gaId: "G-XXXXXXXXXX",
 
   // Social Channels
@@ -33,6 +33,6 @@ export const siteSettings: SiteSettings = {
 
   // Footer & Copyright
   footerText:
-    "Business Solutions Tax Consultants (BSTC) delivers certified tax, accounting, and corporate advisory services across Pakistan. Led by Registered Income Tax Practitioners.",
+    "Business Solutions Tax Consultants (BSTC) delivers certified tax, accounting, corporate advisory, and full-suite IT & digital solutions across Pakistan. Led by Registered Income Tax Practitioners.",
   copyright: "© 2026 Business Solutions Tax Consultants (BSTC). All rights reserved.",
 };

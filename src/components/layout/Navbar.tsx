@@ -85,7 +85,7 @@ export function Navbar() {
                 {siteSettings.siteName}
               </span>
               <span className="text-[10px] font-bold text-lime-700 dark:text-lime-400 tracking-wider uppercase leading-tight mt-0.5">
-                Tax Consultants
+                Tax &amp; IT Solutions
               </span>
             </div>
           </Link>

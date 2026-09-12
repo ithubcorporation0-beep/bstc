@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, Award, Users, Zap } from "lucide-react";
+import { ShieldCheck, Award, Code2, Zap } from "lucide-react";
 import { homeContent } from "@/data/home";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
@@ -12,23 +12,23 @@ export function About() {
   const valueCards = [
     {
       icon: ShieldCheck,
-      title: "Certified Experts",
-      desc: "Registered Income Tax Practitioners (ITPs) with over 20 years of regulatory experience.",
+      title: "Certified Tax Experts",
+      desc: "Registered Income Tax Practitioners (ITPs) with over 20 years of regulatory compliance experience.",
+    },
+    {
+      icon: Code2,
+      title: "IT & Digital Solutions",
+      desc: "Custom business software, responsive modern websites, branding, and performance digital marketing.",
     },
     {
       icon: Award,
-      title: "Trusted Services",
-      desc: "Proven track record with 15,000+ satisfied individual, SME, and corporate clients.",
-    },
-    {
-      icon: Users,
-      title: "Professional Support",
-      desc: "Dedicated consultants who guide you through every notice, audit, and filing step.",
+      title: "Trusted Track Record",
+      desc: "Proven reliability with 15,000+ satisfied individual, SME, and corporate clients across Pakistan.",
     },
     {
       icon: Zap,
-      title: "Fast Processing",
-      desc: "Expedited turnaround times for NTN issuance, SECP incorporation, and sales tax filings.",
+      title: "Fast Execution",
+      desc: "Expedited turnaround for tax filings, SECP registrations, and enterprise digital deployments.",
     },
   ];
 

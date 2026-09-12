@@ -121,7 +121,11 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-lime-700 dark:text-lime-400" />
-              <span>Fast Digital Filing</span>
+              <span>Enterprise IT &amp; Digital Solutions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-lime-700 dark:text-lime-400" />
+              <span>Fast Digital Delivery</span>
             </div>
           </div>
         </Reveal>

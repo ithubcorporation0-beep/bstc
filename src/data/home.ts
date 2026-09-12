@@ -23,9 +23,9 @@ export const homeContent: HomeContent = {
   about: {
     title: "About Business Solutions Tax Consultants",
     intro:
-      "Led by Javid Hussain, Director, and Hassan Zeb, CEO & Registered Income Tax Practitioner (ITP), BSTC was established with one mission: Tax compliance and corporate registration should never be confusing, slow, or uncertain.",
+      "Led by Javid Hussain, Director, and Hassan Zeb, CEO & Registered Income Tax Practitioner (ITP), Business Solutions Tax Consultants (BSTC) is a premier full-service advisory firm delivering certified taxation compliance, corporate legal registrations, and cutting-edge IT & digital solutions across Pakistan.",
     desc:
-      "For over two decades, we have helped salaried individuals, freelancers, commercial traders, startups, and established enterprises across Pakistan navigate tax compliance, corporate registrations, bookkeeping, and financial reporting with total confidence.\n\nWhether you need seamless annual income tax return filing, provincial sales tax handling, or SECP private limited company incorporation, our dedicated practitioners manage the complexities so you can focus on building your business.",
+      "For over two decades, BSTC has helped salaried individuals, freelancers, commercial traders, startups, and established enterprises navigate tax compliance, SECP company registrations, bookkeeping, and financial reporting with total confidence.\n\nTo accelerate your business in today's digital economy, we also provide full-suite IT & Digital Services — including custom software development, modern high-converting websites, digital marketing & SEO, brand identity design, and scalable e-commerce solutions. From legal incorporation to digital market leadership, BSTC is your all-in-one business growth partner.",
     img: "/images/about-consultant.jpg",
     cards: [
       {
@@ -33,8 +33,12 @@ export const homeContent: HomeContent = {
         desc: "Direct advisory by certified Income Tax Practitioners registered with regulatory authorities.",
       },
       {
-        title: "End-to-End Compliance",
-        desc: "From NTN issuance and sales tax to annual auditing and corporate SECP filings.",
+        title: "End-to-End Corporate Compliance",
+        desc: "From NTN issuance and provincial sales tax to annual auditing and corporate SECP filings.",
+      },
+      {
+        title: "Comprehensive IT & Digital Solutions",
+        desc: "Custom enterprise software, modern web portals, digital marketing, branding, and e-commerce.",
       },
       {
         title: "100% Digital Convenience",
@@ -94,6 +98,10 @@ export const homeContent: HomeContent = {
     {
       q: "Are there any hidden costs in your consultation or filing fees?",
       a: "No. We believe in 100% transparent pricing and provide a comprehensive itemized quote before initiating any filing, registration, or advisory assignment.",
+    },
+    {
+      q: "What IT and digital solutions does BSTC offer to businesses?",
+      a: "Beyond tax and corporate advisory, BSTC provides full-spectrum enterprise IT services: custom software and ERP development, modern responsive websites, digital marketing and SEO campaigns, graphic design and branding, and turnkey e-commerce platforms.",
     },
   ],
   testimonials: [
