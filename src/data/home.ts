@@ -101,7 +101,7 @@ export const homeContent: HomeContent = {
     },
     {
       q: "What IT and digital solutions does BSTC offer to businesses?",
-      a: "Beyond tax and corporate advisory, BSTC provides full-spectrum enterprise IT services: custom software and ERP development, modern responsive websites, digital marketing and SEO campaigns, graphic design and branding, and turnkey e-commerce platforms.",
+      a: "Beyond tax and corporate advisory, BSTC provides full-spectrum enterprise IT services: custom software solutions and ERP development, modern responsive websites, digital marketing and SEO campaigns, graphic design and branding, and e-commerce platforms serving businesses all over the world.",
     },
   ],
   testimonials: [

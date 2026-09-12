@@ -234,11 +234,11 @@ export const services: Service[] = [
   },
   {
     slug: "software-solutions",
-    title: "Software Solutions",
+    title: "Custom Software Solutions",
     icon: "Code2",
     desc: "Bespoke enterprise software, custom CRM/ERP platforms, cloud architectures, and intelligent business automation.",
     fullDesc:
-      "In today's fast-moving business landscape, generic off-the-shelf software rarely meets every operational demand. Our Software Solutions practice crafts secure, scalable, and performance-oriented software systems engineered specifically around your corporate workflows.\n\nFrom customized ERP and CRM systems to intelligent process automation and cloud-native microservices, we bridge technical innovation with practical business needs. Every software project undergoes rigorous code reviews, automated security audits, modular architecture planning, and seamless integration with your existing accounting, tax, or inventory management platforms.",
+      "In today's fast-moving business landscape, generic off-the-shelf software rarely meets every operational demand. Our Custom Software Solutions practice crafts secure, scalable, and performance-oriented software systems engineered specifically around your corporate workflows.\n\nFrom customized ERP and CRM systems to intelligent process automation and cloud-native microservices, we bridge technical innovation with practical business needs. Every software project undergoes rigorous code reviews, automated security audits, modular architecture planning, and seamless integration with your existing accounting, tax, or inventory management platforms.",
     benefits: [
       "Custom Enterprise Architecture & Highly Scalable Backend Systems",
       "Seamless Integration with Financial Ledgers, POS & ERP Systems",
@@ -408,14 +408,14 @@ export const services: Service[] = [
     slug: "ecommerce-solutions",
     title: "E-Commerce Solutions",
     icon: "ShoppingCart",
-    desc: "Turnkey online stores, secure payment gateway integrations, automated inventory management, and conversion-optimized storefronts.",
+    desc: "Online stores for businesses all over the world, secure payment gateway integrations, automated inventory management, and conversion-optimized storefronts.",
     fullDesc:
-      "Expand your commercial reach with modern e-commerce storefronts engineered for high conversion rates, frictionless checkouts, and effortless catalog administration.\n\nWe build custom online stores, integrate local and international payment gateways, connect automated multi-location inventory management, and implement FBR POS / DIS tax-compliant invoicing so you can sell products locally and globally without operational friction.",
+      "Expand your commercial reach with modern e-commerce storefronts engineered for high conversion rates, frictionless checkouts, and effortless catalog administration for businesses all over the world.\n\nWe build custom online stores, integrate local and international payment gateways, connect automated multi-location inventory management, and implement FBR POS / DIS tax-compliant invoicing so you can sell products locally and all over the world without operational friction.",
     benefits: [
       "High-Converting Checkout Flow & Streamlined Cart Experience",
       "Seamless Payment Gateway Integration (Cards, Bank Transfer, JazzCash, EasyPaisa, Stripe)",
       "Automated Tax Calculation & FBR POS / Digital Invoicing Integration",
-      "Mobile-First Design with Fast Product Search & Smart Faceted Filtering",
+      "Global Multi-Currency & Worldwide Shipping Integration",
     ],
     reqDocs: [
       "Product Catalog Outline (Categories, variants, pricing, SKU structures)",
@@ -437,12 +437,12 @@ export const services: Service[] = [
       },
       {
         q: "Can you integrate local Pakistani payment gateways and courier tracking APIs?",
-        a: "Yes. We provide complete integration for Pakistani payment gateways (PayFast, Alfa, JazzCash, EasyPaisa) and courier APIs (TCS, Leopards, Trax) for real-time order tracking and automated dispatch.",
+        a: "Yes. We provide complete integration for Pakistani payment gateways (PayFast, Alfa, JazzCash, EasyPaisa) as well as global payment systems (Stripe, PayPal) and international couriers (DHL, FedEx) for businesses selling all over the world.",
       },
     ],
-    seoTitle: "E-Commerce Solutions & Online Store Development | BSTC",
+    seoTitle: "E-Commerce Solutions & Global Online Store Development | BSTC",
     seoDesc:
-      "Turnkey e-commerce website development, secure payment gateway integrations, automated inventory management, and high-converting online stores.",
+      "High-converting e-commerce online stores for businesses all over the world, secure international payment gateway integrations, and automated inventory management.",
     status: "active",
     order: 19,
     category: "it-digital",

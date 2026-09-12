@@ -10,7 +10,13 @@ export { services, team, homeContent, siteSettings };
  * Retrieves a single service by its URL slug.
  */
 export function getServiceBySlug(slug: string): Service | undefined {
-  return services.find((s) => s.slug.toLowerCase() === slug.toLowerCase());
+  const s = slug.toLowerCase();
+  return services.find(
+    (item) =>
+      item.slug.toLowerCase() === s ||
+      (item.slug.toLowerCase() === "software-solutions" && s === "custom-software-solutions") ||
+      (item.slug.toLowerCase() === "custom-software-solutions" && s === "software-solutions")
+  );
 }
 
 /**
