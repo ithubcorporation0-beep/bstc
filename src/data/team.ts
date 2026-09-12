@@ -71,7 +71,7 @@ export const team: TeamMember[] = [
     phone: "+92 313 1541054",
     wa: "923131541054",
     li: "https://linkedin.com",
-    img: "/images/team/azlan-manzoor.svg",
+    img: "/images/team/azlan-manzoor.jpg",
     status: "active",
     order: 3,
   },

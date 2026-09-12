@@ -174,7 +174,7 @@ export function getPersonJsonLd(member: TeamMember) {
     },
     description: member.shortDesc,
     url: `${siteUrl}/team/${member.slug}`,
-    image: `${siteUrl}/images/team/${member.slug}.svg`,
+    image: member.img ? `${siteUrl}${member.img}` : `${siteUrl}/images/team/${member.slug}.svg`,
   };
 
   if (member.email) {
